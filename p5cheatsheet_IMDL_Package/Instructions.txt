@@ -2,9 +2,9 @@ ADOBE INDESIGN PRINTING INSTRUCTIONS FOR SERVICE PROVIDER REPORT
 
 PUBLICATION NAME: p5cheatsheet.indd
 
-PACKAGE DATE: 2/8/19 11:03 PM
-Creation Date: 2/8/19
-Modification Date: 2/8/19
+PACKAGE DATE: 2/11/19 2:09 PM
+Creation Date: 2/11/19
+Modification Date: 2/11/19
 
 CONTACT INFORMATION
 
@@ -31,10 +31,11 @@ External Plug-ins 0
 Non Opaque Objects :None
 
 FONTS
-4 Fonts Used; 0 Missing, 0 Embedded, 0 Incomplete, 0 Protected
+5 Fonts Used; 0 Missing, 0 Embedded, 0 Incomplete, 0 Protected
 
 Fonts Packaged
 - Name: FiraCode-Bold; Type: OpenType Type 1, Status: OK
+- Name: FiraCode-Light; Type: OpenType Type 1, Status: OK
 - Name: FiraCode-Medium; Type: OpenType Type 1, Status: OK
 - Name: FiraCode-Regular; Type: OpenType Type 1, Status: OK
 - Name: PTMono-Bold; Type: TrueType, Status: OK
@@ -81,10 +82,10 @@ Flip Mode: Off
 
 FILE PACKAGE LIST
 
-1. p5cheatsheet.indd; type: Adobe InDesign publication; size: 2020K
-2. p5cheatsheet.idml; type: InDesign Markup Document; size: 88K
-3. p5cheatsheet.pdf; type: Adobe Acrobat Document; size: 46K
-4. FiraCode-Bold.otf; type: Font file; size: 161K
+1. p5cheatsheet.indd; type: Adobe InDesign publication; size: 2040K
+2. p5cheatsheet.idml; type: InDesign Markup Document; size: 89K
+3. FiraCode-Bold.otf; type: Font file; size: 161K
+4. FiraCode-Light.otf; type: Font file; size: 156K
 5. FiraCode-Medium.otf; type: Font file; size: 158K
 6. FiraCode-Regular.otf; type: Font file; size: 156K
 7. PTMono.ttc; type: Font file; size: 308K
