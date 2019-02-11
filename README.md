@@ -5,3 +5,5 @@
 ![p5js cheat sheet](p5cheatsheet.png)
 
 [Creative Commons BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+With thanks to past cheat sheets like Ryo Sakai's more [comprehensive p5.js sheet](https://twitter.com/ryodejaneiro/status/827314983948210176) !
