@@ -1,10 +1,10 @@
 ADOBE INDESIGN PRINTING INSTRUCTIONS FOR SERVICE PROVIDER REPORT
 
-PUBLICATION NAME: p5cheatsheet-FR.indd
+PUBLICATION NAME: p5cheatsheet-FR-2-pk.indd
 
-PACKAGE DATE: 3/3/19 9:35 AM
-Creation Date: 3/3/19
-Modification Date: 3/3/19
+PACKAGE DATE: 4/15/19 9:16 AM
+Creation Date: 4/15/19
+Modification Date: 4/15/19
 
 CONTACT INFORMATION
 
@@ -82,9 +82,9 @@ Flip Mode: Off
 
 FILE PACKAGE LIST
 
-1. p5cheatsheet-FR.indd; type: Adobe InDesign publication; size: 1840K
-2. p5cheatsheet-FR.idml; type: InDesign Markup Document; size: 91K
-3. p5cheatsheet-FR.pdf; type: Adobe Acrobat Document; size: 51K
+1. p5cheatsheet-FR-2-pk.indd; type: Adobe InDesign publication; size: 1848K
+2. p5cheatsheet-FR-2-pk.idml; type: InDesign Markup Document; size: 91K
+3. p5cheatsheet-FR-2-pk.pdf; type: Adobe Acrobat Document; size: 51K
 4. FiraCode-Bold.otf; type: Font file; size: 161K
 5. FiraCode-Light.otf; type: Font file; size: 156K
 6. FiraCode-Medium.otf; type: Font file; size: 158K
