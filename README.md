@@ -1,5 +1,4 @@
-## a p5js cheat sheet for beginners!
-
+# a p5js cheat sheet for beginners!
 
 ### English - Beginner Cheat Sheet
 [Download PDF](p5cheatsheet.pdf)
@@ -16,6 +15,8 @@ Translation by: @rich-gg
 ![p5js cheat sheet Japanese](png/p5cheatsheet-JA.png)
 Translation by: Takawo Shunsuke
 
+
+---
 
 [Creative Commons BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
