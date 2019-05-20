@@ -5,8 +5,15 @@
 ### English - Beginner Cheat Sheet
 ![p5js cheat sheet](png/p5cheatsheet.png)
 
+
 ### French - Beginner Cheat Sheet
-![p5js cheat sheet](png/p5cheatsheet-FR.png)
+![p5js cheat sheet French](png/p5cheatsheet-FR.png)
+Translation by: @rich-gg
+
+### Japanese - Beginner Cheat sheet
+![p5js cheat sheet Japanese](png/p5cheatsheet-JA.png)
+Translation by: Takawo Shunsuke
+
 
 [Creative Commons BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
