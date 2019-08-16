@@ -1,0 +1,92 @@
+ADOBE INDESIGN PRINTING INSTRUCTIONS FOR SERVICE PROVIDER REPORT
+
+PUBLICATION NAME: p5cheatsheet-FR-2-pk.indd
+
+PACKAGE DATE: 4/15/19 9:16 AM
+Creation Date: 4/15/19
+Modification Date: 4/15/19
+
+CONTACT INFORMATION
+
+Company Name: 
+Contact: 
+Address: 
+
+
+
+
+
+Phone: 
+Fax: 
+Email: 
+
+SPECIAL INSTRUCTIONS AND OTHER NOTES
+
+
+
+
+
+
+External Plug-ins 0
+Non Opaque Objects :None
+
+FONTS
+5 Fonts Used; 0 Missing, 0 Embedded, 0 Incomplete, 0 Protected
+
+Fonts Packaged
+- Name: FiraCode-Bold; Type: OpenType Type 1, Status: OK
+- Name: FiraCode-Light; Type: OpenType Type 1, Status: OK
+- Name: FiraCode-Medium; Type: OpenType Type 1, Status: OK
+- Name: FiraCode-Regular; Type: OpenType Type 1, Status: OK
+- Name: PTMono-Bold; Type: TrueType, Status: OK
+
+
+COLORS AND INKS
+4 Process Inks; 0 Spot Inks
+
+- Name and Type: Process Cyan; Angle: 75.000; Lines/Inch: 70.000
+- Name and Type: Process Magenta; Angle: 15.000; Lines/Inch: 70.000
+- Name and Type: Process Yellow; Angle: 0.000; Lines/Inch: 70.000
+- Name and Type: Process Black; Angle: 45.000; Lines/Inch: 70.000
+
+
+LINKS AND IMAGES
+(Missing & Embedded Links Only)
+Links and Images: 0 Links Found; 0 Modified, 0 Missing, 0 Inaccessible
+Images: 0 Embedded, 0 use RGB color space
+
+PRINT SETTINGS
+PPD: Canon iR-ADV 4225/4235 P, (3rdFloorMain-Canonir3235i)
+Printing To: Printer
+Number of Copies: 1
+Reader Spreads: No
+Even/Odd Pages: Both
+Pages: All
+Proof: No
+Tiling: None
+Scale: 100%, 100%
+Page Position: Upper Left
+Print Layers: Visible & Printable Layers
+Printer's Marks: None
+Bleed: 0 in, 0 in, 0 in, 0 in
+Color: Composite, Colors in Black.
+Trapping Mode: None
+Send Image Data: Optimized Subsampling
+OPI/DCS Image Replacement: No
+Page Size: Letter
+Paper Dimensions: 8.5 in x 11 in
+Orientation: Landscape
+Negative: No
+Flip Mode: Off
+
+
+FILE PACKAGE LIST
+
+1. p5cheatsheet-FR-2-pk.indd; type: Adobe InDesign publication; size: 1848K
+2. p5cheatsheet-FR-2-pk.idml; type: InDesign Markup Document; size: 91K
+3. p5cheatsheet-FR-2-pk.pdf; type: Adobe Acrobat Document; size: 51K
+4. FiraCode-Bold.otf; type: Font file; size: 161K
+5. FiraCode-Light.otf; type: Font file; size: 156K
+6. FiraCode-Medium.otf; type: Font file; size: 158K
+7. FiraCode-Regular.otf; type: Font file; size: 156K
+8. PTMono.ttc; type: Font file; size: 308K

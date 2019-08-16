@@ -1,0 +1,155 @@
+%!Adobe-FontList 1.19
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:FiraCode-Bold
+FamilyName:Fira Code
+StyleName:Bold
+MenuName:Fira Code
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Fira Code Bold
+WritingScript:Roman
+OutlineFileName:\FiraCode-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:164920
+FileModTime:1538325067
+NameArray:0,Mac,4,Fira Code Bold
+NameArray:0,Win,1,Fira Code
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:FiraCode-Regular
+FamilyName:Fira Code
+StyleName:Regular
+MenuName:Fira Code
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Fira Code Regular
+WritingScript:Roman
+OutlineFileName:\FiraCode-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:160448
+FileModTime:1538325038
+NameArray:0,Mac,4,Fira Code Regular
+NameArray:0,Win,1,Fira Code
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:FiraCode-Medium
+FamilyName:Fira Code
+StyleName:Medium
+MenuName:Fira Code Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Fira Code Medium
+WritingScript:Roman
+OutlineFileName:\FiraCode-Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:162092
+FileModTime:1538325037
+NameArray:0,Mac,4,Fira Code Medium
+NameArray:0,Win,1,Fira Code Medium
+NameArray:0,Win,16,Fira Code
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTMono-Bold
+FamilyName:PT Mono
+StyleName:Bold
+MenuName:PT Mono
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:PT Mono Bold
+WritingScript:Roman
+OutlineFileName:\PTMono.ttc
+TTCOffset:32
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:315876
+FileModTime:1501539113
+NameArray:0,Mac,18,PT Mono Bold
+NameArray:0,Mac,4,PT Mono Bold
+NameArray:0,Win,1,PT Mono
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PTMono-Regular
+FamilyName:PT Mono
+StyleName:Regular
+MenuName:PT Mono
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:PT Mono
+WritingScript:Roman
+OutlineFileName:\PTMono.ttc
+TTCOffset:316
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:315876
+FileModTime:1501539113
+NameArray:0,Mac,18,PT Mono
+NameArray:0,Mac,4,PT Mono
+NameArray:0,Win,1,PT Mono
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:FiraCode-Light
+FamilyName:Fira Code
+StyleName:Light
+MenuName:Fira Code Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Fira Code Light
+WritingScript:Roman
+OutlineFileName:\FiraCode-Light.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:159964
+FileModTime:1538325038
+NameArray:0,Mac,4,Fira Code Light
+NameArray:0,Win,1,Fira Code Light
+NameArray:0,Win,16,Fira Code
+%EndFont
+
