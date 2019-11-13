@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>p5.js Cheat Sheet</title>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+
+	<link rel="stylesheet" type="text/css" href="./style.css" media="all">
+
+	<script src="./assets/js/p5.min.js"></script>
+	<script src="./assets/js/p5.dom.min.js"></script>
+</head>
+<body>
+	<header id="page-header">
+		<ul id="language-selection">
+			<li><a href="index.html">English</a></li>
+			<li><a href="fr.html">Français</a></li>
+			<li><a href="de.html">Deutsche</a></li>
+			<li><a href="ja.html">日本語</a></li>
+			<li><a href="nl.html">Nederlands</a></li>
+		</ul>
+	</header>
+
+	<article id="cheat-sheet">
+		<div class="column">
+			<header>
+				<h1 id="title">p5.js</h1>
+				<p id="subtitle"> Spickzettel für Anfänger!</p>
+			</header>
+
+			<section>
+				<h1>programmstruktur</h1>
+				<pre>
+<span class="code-comments">//wird einmal bei programmstart ausgeführt</span>
+function <strong>setup()</strong>{
+  createCanvas(800,600);
+}
+
+<span class="code-comments">//läuft fortwährend</span>
+function <strong>draw()</strong>{
+  <span class="code-comments">//ausgabeschleife</span>
+}
+				</pre>
+			</section>
+
+			<section>
+				<h1>systemvariablen</h1>
+				<pre>
+<strong>windowWidth / windowHeight</strong>
+<span class="descriptors">breite / höhe des fensters</span>
+
+<strong>width / height</strong>
+<span class="descriptors">breite / höhe des canvas</span>
+
+<strong>mouseX / mouseY</strong>
+<span class="descriptors">aktuelle horizontale / vertikale mausposition</span>
+				</pre>
+			</section>
+
+			<section>
+				<h1>konsolenausgabe</h1>
+				<pre>
+<strong>print()</strong>
+<span class="descriptors">daten in der konsole ausgeben</span>
+				</pre>
+			</section>
+
+			<section>
+				<h1>farbe</h1>
+				<pre>
+<strong>fill(</strong>120<strong>)</strong> <span class="descriptors">grau: 0-255</span>
+<strong>fill(</strong>100,125,255<strong>)</strong> <span class="descriptors">r, g, b: 0-255</span>
+<strong>fill(</strong>255, 0, 0, 50<strong>)</strong> <span class="descriptors">r, g, b, alpha</span>
+<strong>fill(</strong>'red'<strong>)</strong> <span class="descriptors">farbbezeichnung</span>
+<strong>fill(</strong>'#ccc'<strong>)</strong> <span class="descriptors">3-stelliger hexcode</span>
+<strong>fill(</strong>'#222222'<strong>)</strong> <span class="descriptors">6-stelliger hex</span>
+<strong>color(</strong>0, 0, 255<strong>)</strong> <span class="descriptors">p5 farbobjekt</span>
+				</pre>
+			</section>
+		</div>
+
+		<div class="column">
+			<section>
+				<h1>2D-formen</h1>
+				<pre>
+<strong>line(</strong>x1, y1, x2, y2<strong>)</strong>
+
+<strong>ellipse(</strong>x1, y1, breite, höhe<strong>)</strong>
+
+<strong>rect(</strong>x1, y1, breite, höhe<strong>)</strong> <span class="code-comments">//rechteck</span>
+
+<span class="code-comments">//bogen</span>
+<strong>arc(</strong>x1, y1, breite, höhe, start, stop<strong>)</strong>
+
+<strong>beginShape();</strong>
+  <strong>vertex(x1, y1);</strong>
+  <strong>vertex(x2, y2);</strong>
+  <strong>vertex(x3, y3);</strong>
+<strong>endShape(</strong>CLOSE<strong>);</strong>
+
+<strong>text(</strong>"begriff", x, y, breite, höhe<strong>)</strong>
+				</pre>
+
+				<ul>
+					<li class="canvas-container">
+						<h2>rastersystem</h2>
+						<div id="grid-canvas"></div>
+					</li>
+					<li class="canvas-container">
+						<h2>line()</h2>
+						<div id="line-canvas"></div>
+					</li>
+					<li class="canvas-container">
+						<h2>ellipse()</h2>
+						<div id="ellipse-canvas"></div>
+					</li>
+					<li class="canvas-container">
+						<h2>rect()</h2>
+						<div id="rect-canvas"></div>
+					</li>
+					<li class="canvas-container">
+						<h2>arc()</h2>
+						<div id="arc-canvas"></div>
+					</li>
+					<li class="canvas-container">
+						<h2>vertex()</h2>
+						<div id="vertex-canvas"></div>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h1>math</h1>
+				<pre>
+<strong>+ - / *</strong>
+
+<strong>random(</strong>minimum,maximum<strong>)</strong>
+
+<strong>map(</strong>wert, in1, in2, out1, out2<strong>)</strong>
+<span class="descriptors">transformiert einen wert von der eingabeskala in die ausgabeskala</span>
+				</pre>
+			</section>
+		</div>
+
+		<div class="column">
+			<section>
+				<h1>attributes</h1>
+				<pre>
+<strong>background(</strong>farbe<strong>)</strong>
+<span class="descriptors">hintergrundfarbe setzen</span>
+
+<strong>fill(</strong>farbe<strong>)</strong>
+<span class="descriptors">füllfarbe setzen</span>
+
+<strong>noFill()</strong>
+<span class="descriptors">keine füllfarbe</span>
+
+<strong>stroke(</strong>farbe<strong>)</strong>
+<span class="descriptors">strichfarbe setzen</span>
+
+<strong>strokeWeight(</strong>stärke<strong>)</strong>
+<span class="descriptors">strichstärke einstellen</span>
+
+<strong>noStroke()</strong>
+<span class="descriptors">kein strich zeichnen</span>
+
+<strong>ellipseMode(</strong>modus<strong>)</strong>
+<strong>rectMode(</strong>modus<strong>)</strong>
+<span class="descriptors">CENTER oder CORNER</span>
+
+<strong>textSize(</strong>pixels<strong>)</strong>
+				</pre>
+			</section>
+
+			<section>
+				<h1>if/then Logik</h1>
+				<pre>
+
+<strong>if(</strong>bedingung<strong>){</strong>
+  programmcode
+<strong>}</strong>
+
+== gleich wie
+!= ungleich
+>  grösser als
+<  kleiner als
+>= grösser oder
+   gleich wie
+<= kleiner oder
+   gleich wie
+
+				</pre>
+				<div id="ifelse-canvas"></div>
+			</section>
+		</div>
+	</article>
+
+	<footer>
+		Compiled by Ben Moren http://benmoren.com CC BY SA NC 4.0<br/>
+		Translation by Philipp Lehmann
+	</footer>
+	<script src="./de-main.js"></script>
+</body>
+</html>
