@@ -1,0 +1,201 @@
+@font-face{
+	font-family: "Fira Code";
+	font-weight: normal;
+	src: url("/fonts/FiraCode-Regular.otf") format("truetype");
+}
+
+@font-face{
+	font-family: "Fira Code";
+	font-weight: light;
+	src: url("/fonts/FiraCode-Light.otf") format("truetype");
+}
+
+@font-face{
+	font-family: "Fira Code";
+	font-weight: medium;
+	src: url("/fonts/FiraCode-Medium.otf") format("truetype");
+}
+
+@font-face{
+	font-family: "Fira Code";
+	font-weight: bold;
+	src: url("/fonts/FiraCode-Bold.otf") format("truetype");
+}
+
+*{
+	color-adjust: exact;
+	-webkit-print-color-adjust: exact;
+}
+
+header#page-header{
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+header#page-header #language-selection{
+	position: absolute;
+	right: 0;
+	width: auto;
+	display: flex;
+	list-style: none;
+	padding: 15px;
+	margin: 0;
+}
+
+header#page-header #language-selection li{
+	padding: 0 5px;
+}
+
+body{
+	padding: 35px;
+	margin: 0;
+	font-family: "Fira Code", monospace;
+	font-size: 12pt;
+}
+
+h1, h2{
+	color: #ed225d;
+	font-size: 14pt;
+}
+
+h2 { 
+	padding-left: calc(10vw/15);
+	white-space: nowrap;
+}
+
+#cheat-sheet{
+
+}
+
+#cheat-sheet pre{
+	padding: 4.5px;
+	background: #fafafa;
+	white-space: pre-wrap;
+}
+
+#cheat-sheet pre .code-comments{
+	color: #a4a4a4;
+}
+
+#cheat-sheet pre .descriptors{
+	color: #545454;
+}
+
+#cheat-sheet #title{
+	margin-top: 20px;
+	font-size: 32pt;
+}
+
+#cheat-sheet #subtitle{
+	padding: 10px;
+	color: white;
+	background: #ed225d;
+}
+
+#cheat-sheet ul{
+	padding: 0;
+	list-style: none;
+}
+
+#cheat-sheet .canvas-container{
+	display: inline-block;
+}
+
+@media screen and (max-width: 375px){
+	body{
+		padding: 20px;
+		font-size: 11pt;
+	}
+
+	h1, h2{
+		font-size: 10pt;
+	}
+}
+
+@media print{
+	@page{
+		size: landscape;
+		margin: 0;
+	}
+
+	header#page-header{
+		display: none;
+	}
+
+	body{
+		font-size: 9.5pt;
+		padding-top: 25px;
+		padding-bottom: 0;
+	}
+
+	h1, h2{
+		margin: 0px;
+	}
+
+	h2{
+		font-size: 9.5pt;
+	}
+
+	#cheat-sheet{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#cheat-sheet .column{
+		width: 31%;
+		max-height: 90vh;
+	}
+
+	#cheat-sheet .canvas-container{
+		width: 31%;
+	}
+
+	#cheat-sheet .canvas-container .p5Canvas{
+		width: 10vw !important;
+		height: 10vw !important;
+	}
+
+	#cheat-sheet pre{
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	#cheat-sheet #title{
+		display: inline-block;
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	#cheat-sheet #subtitle{
+		display: inline-block;
+		margin-left: 10px;
+		width: 120px;
+	}
+
+	#cheat-sheet #ifelse-canvas{
+		position: absolute;
+		bottom: 150px;
+		right: 40px;
+	}
+
+	#cheat-sheet #ifelse-canvas canvas{
+		width: 150px !important;
+		height: 170px !important;
+	}
+
+	footer{
+		font-size: 0.5rem;
+	}
+}
+
+@media print and (orientation: portrait){
+	#cheat-sheet #ifelse-canvas{
+		position: relative;
+		float: left;
+		right: 0;
+		bottom: 0;
+	}
+}
