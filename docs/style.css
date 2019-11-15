@@ -61,9 +61,16 @@ h1, h2{
 	font-size: 14pt;
 }
 
-h2 { 
+h2 {
 	padding-left: calc(10vw/15);
 	white-space: nowrap;
+}
+
+a{
+	color:#ed225d;
+}
+a:hover{
+	color: #545454;
 }
 
 #cheat-sheet{

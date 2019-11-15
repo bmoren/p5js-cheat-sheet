@@ -7,8 +7,8 @@
 
 	<link rel="stylesheet" type="text/css" href="./style.css" media="all">
 
-	<script src="./assets/js/p5.min.js"></script>
-	<script src="./assets/js/p5.dom.min.js"></script>
+	<script src="p5.min.js"></script>
+
 </head>
 <body>
 	<header id="page-header">
@@ -85,12 +85,12 @@ function <strong>draw()</strong>{
 				<pre>
 <strong>line(</strong>x1, y1, x2, y2<strong>)</strong>
 
-<strong>ellipse(</strong>x1, y1, breite, höhe<strong>)</strong>
+<strong>ellipse(</strong>x, y, breite, höhe<strong>)</strong>
 
-<strong>rect(</strong>x1, y1, breite, höhe<strong>)</strong> <span class="code-comments">//rechteck</span>
+<strong>rect(</strong>x, y, breite, höhe<strong>)</strong> <span class="code-comments">//rechteck</span>
 
 <span class="code-comments">//bogen</span>
-<strong>arc(</strong>x1, y1, breite, höhe, start, stop<strong>)</strong>
+<strong>arc(</strong>x, y, breite, höhe, start, stop<strong>)</strong>
 
 <strong>beginShape();</strong>
   <strong>vertex(x1, y1);</strong>
@@ -199,6 +199,24 @@ function <strong>draw()</strong>{
 		Compiled by Ben Moren http://benmoren.com CC BY SA NC 4.0<br/>
 		Translation by Philipp Lehmann
 	</footer>
+
+	<script type="text/javascript">
+
+	// Terms to translate for diagrams
+	var terms = {
+		"width": "breite",
+		"height": "höhe",
+		"stop": "stop",
+		"start": "start",
+		"true": "wahr",
+		"false": "falsch",
+		"continue_program": "programm wird\nweitergeführt",
+		"test": "bedingung",
+		"statements": "programmcode"
+	};
+
+
+	</script>
 	<script src="./de-main.js"></script>
 </body>
 </html>

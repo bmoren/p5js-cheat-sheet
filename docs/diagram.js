@@ -1,28 +1,20 @@
-// Terms to translate
-var terms = {
-	"width": "width",
-	"height": "height",
-	"stop": "stop",
-	"start": "start",
-	"true": "true",
-	"false": "false",
-	"continue_program": "continue program",
-	"test": "test",
-	"statements": "statements"
-};
-
-// Actual sketch codes
 var canvasSize = 220;
 var p5Pink = "#ed225d";
 
 var gridSketch = function(p){
 	var canvas;
 
+	var fira;
+	p.preload = function(){
+		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+	}
+
 	p.setup = function(){
 		canvas = p.createCanvas(canvasSize, canvasSize);
 		canvas.parent("grid-canvas");
 		p.strokeWeight(0.25);
 		p.translate(canvasSize/15, canvasSize/15);
+
 
 		var gridSize = canvasSize - 2 * canvasSize / 15;
 		for(var x=0; x<=10; x++){
@@ -36,14 +28,19 @@ var gridSketch = function(p){
 		p.fill("#000000");
 		p.ellipse(0, 0, gridSize/20, gridSize/20);
 
-		p.textFont("Fira Code");
 		p.textAlign(p.LEFT, p.TOP);
+		p.textFont(fira);
 		p.text("(0,0)", 5, 5);
 	};
 };
 
 var lineSketch = function(p){
 	var canvas;
+
+	var fira;
+	p.preload = function(){
+		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+	}
 
 	p.setup = function(){
 		canvas = p.createCanvas(canvasSize, canvasSize);
@@ -71,7 +68,7 @@ var lineSketch = function(p){
 		p.strokeWeight(2);
 		p.line(x1, y1, x2, y2);
 
-		p.textFont("Fira Code");
+		p.textFont(fira);
 		p.noStroke();
 		p.textAlign(p.RIGHT, p.BOTTOM);
 		p.text("(x1,y1)", x1-5, y1-5);
@@ -83,6 +80,11 @@ var lineSketch = function(p){
 
 var ellipseSketch = function(p){
 	var canvas;
+
+	var fira;
+	p.preload = function(){
+		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+	}
 
 	p.setup = function(){
 		canvas = p.createCanvas(canvasSize, canvasSize);
@@ -111,10 +113,10 @@ var ellipseSketch = function(p){
 		p.fill("#000000");
 		p.ellipse(x1, y1, gridSize/20, gridSize/20);
 
-		p.textFont("Fira Code");
+		p.textFont(fira);
 		p.noStroke();
 		p.textAlign(p.CENTER, p.BOTTOM);
-		p.text("(x1,y1)", x1, y1-10);
+		p.text("(x,y)", x1, y1-10);
 
 		p.push();
 		p.translate(p.width/2, p.height/2 + (gridSize / 10 * 6.5)/2 + 7);
@@ -134,11 +136,16 @@ var ellipseSketch = function(p){
 var rectSketch = function(p){
 	var canvas;
 
+	var fira;
+	p.preload = function(){
+		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+	}
+
 	p.setup = function(){
 		canvas = p.createCanvas(canvasSize, canvasSize);
 		canvas.parent("rect-canvas");
 		p.strokeWeight(0.25);
-		p.textFont("Fira Code");
+		p.textFont(fira);
 		p.push();
 		p.translate(canvasSize/20, canvasSize/15);
 
@@ -163,7 +170,7 @@ var rectSketch = function(p){
 
 		p.noStroke();
 		p.textAlign(p.CENTER, p.BOTTOM);
-		p.text("(x1,y1)", x1, y1-10);
+		p.text("(x,y)", x1, y1-10);
 		p.pop();
 
 		p.push();
@@ -183,11 +190,15 @@ var rectSketch = function(p){
 var arcSketch = function(p){
 	var canvas;
 
+	var fira;
+	p.preload = function(){
+		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+	}
+
 	p.setup = function(){
 		canvas = p.createCanvas(canvasSize, canvasSize);
 		canvas.parent("arc-canvas");
 		p.strokeWeight(0.25);
-		p.textFont("Fira Code");
 		p.push();
 		p.translate(canvasSize/15, canvasSize/15);
 
@@ -216,9 +227,9 @@ var arcSketch = function(p){
 
 		p.push();
 		p.translate(p.width/2, p.height/2);
-			p.textFont("Fira Code");
+			p.textFont(fira);
 			p.textAlign(p.CENTER, p.BOTTOM);
-			p.text("(x1,y1)", 0, -10);
+			p.text("(x,y)", 0, -10);
 
 			p.textAlign(p.CENTER, p.TOP);
 			p.text(terms.width, 0, gridSize / 10 * 7.5 / 2 + 5);
@@ -241,6 +252,11 @@ var arcSketch = function(p){
 
 var vertexSketch = function(p){
 	var canvas;
+
+	var fira;
+	p.preload = function(){
+		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+	}
 
 	p.setup = function(){
 		canvas = p.createCanvas(canvasSize, canvasSize);
@@ -279,7 +295,7 @@ var vertexSketch = function(p){
 		p.ellipse(x3, y3, gridSize/20, gridSize/20);
 
 		p.textAlign(p.CENTER, p.BOTTOM);
-		p.textFont("Fira Code");
+		p.textFont(fira);
 		p.text("(x1,y1)", x1, y1 - 7);
 
 		p.textAlign(p.CENTER, p.TOP);
@@ -290,6 +306,11 @@ var vertexSketch = function(p){
 
 var ifelseSketch = function(p){
 	var canvas;
+
+	var fira;
+	p.preload = function(){
+		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+	}
 
 	p.setup = function(){
 		canvas = p.createCanvas(215, 245);
@@ -325,7 +346,7 @@ var ifelseSketch = function(p){
 		p.triangle(90, 190, 80, 180, 100, 180);
 
 		// text
-		p.textFont("Fira Code");
+		p.textFont(fira);
 		p.text(terms.true, 100, 65);
 		p.textAlign(p.CENTER, p.BOTTOM);
 		p.text(terms.false, 190, 20);
