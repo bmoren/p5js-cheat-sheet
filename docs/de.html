@@ -53,7 +53,7 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>konsolenausgabe</h1>
 				<pre>
-<strong>print()</strong>
+<strong>print();</strong>
 <span class="descriptors">daten in der konsole ausgeben</span>
 				</pre>
 			</section>
@@ -61,13 +61,13 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>farbe</h1>
 				<pre>
-<strong>fill(</strong>120<strong>)</strong> <span class="descriptors">grau: 0-255</span>
-<strong>fill(</strong>100,125,255<strong>)</strong> <span class="descriptors">r, g, b: 0-255</span>
-<strong>fill(</strong>255, 0, 0, 50<strong>)</strong> <span class="descriptors">r, g, b, alpha</span>
-<strong>fill(</strong>'red'<strong>)</strong> <span class="descriptors">farbbezeichnung</span>
-<strong>fill(</strong>'#ccc'<strong>)</strong> <span class="descriptors">3-stelliger hexcode</span>
-<strong>fill(</strong>'#222222'<strong>)</strong> <span class="descriptors">6-stelliger hex</span>
-<strong>color(</strong>0, 0, 255<strong>)</strong> <span class="descriptors">p5 farbobjekt</span>
+<strong>fill(</strong>120<strong>);</strong> <span class="descriptors">grau: 0-255</span>
+<strong>fill(</strong>100,125,255<strong>);</strong> <span class="descriptors">r, g, b: 0-255</span>
+<strong>fill(</strong>255, 0, 0, 50<strong>);</strong> <span class="descriptors">r, g, b, alpha</span>
+<strong>fill(</strong>'red'<strong>);</strong> <span class="descriptors">farbbezeichnung</span>
+<strong>fill(</strong>'#ccc'<strong>);</strong> <span class="descriptors">3-stelliger hexcode</span>
+<strong>fill(</strong>'#222222'<strong>);</strong> <span class="descriptors">6-stelliger hex</span>
+<strong>color(</strong>0, 0, 255<strong>);</strong> <span class="descriptors">p5 farbobjekt</span>
 				</pre>
 			</section>
 		</div>
@@ -76,14 +76,14 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>2D-formen</h1>
 				<pre>
-<strong>line(</strong>x1, y1, x2, y2<strong>)</strong>
+<strong>line(</strong>x1, y1, x2, y2<strong>);</strong>
 
-<strong>ellipse(</strong>x, y, breite, höhe<strong>)</strong>
+<strong>ellipse(</strong>x, y, breite, höhe<strong>);</strong>
 
-<strong>rect(</strong>x, y, breite, höhe<strong>)</strong> <span class="code-comments">//rechteck</span>
+<strong>rect(</strong>x, y, breite, höhe<strong>);</strong> <span class="code-comments">//rechteck</span>
 
 <span class="code-comments">//bogen</span>
-<strong>arc(</strong>x, y, breite, höhe, start, stop<strong>)</strong>
+<strong>arc(</strong>x, y, breite, höhe, start, stop<strong>);</strong>
 
 <strong>beginShape();</strong>
   <strong>vertex(x1, y1);</strong>
@@ -91,7 +91,7 @@ function <strong>draw()</strong>{
   <strong>vertex(x3, y3);</strong>
 <strong>endShape(</strong>CLOSE<strong>);</strong>
 
-<strong>text(</strong>"begriff", x, y, breite, höhe<strong>)</strong>
+<strong>text(</strong>"begriff", x, y, breite, höhe<strong>);</strong>
 				</pre>
 
 				<ul>
@@ -127,9 +127,9 @@ function <strong>draw()</strong>{
 				<pre>
 <strong>+ - / *</strong>
 
-<strong>random(</strong>minimum,maximum<strong>)</strong>
+<strong>random(</strong>minimum,maximum<strong>);</strong>
 
-<strong>map(</strong>wert, in1, in2, out1, out2<strong>)</strong>
+<strong>map(</strong>wert, in1, in2, out1, out2<strong>);</strong>
 <span class="descriptors">transformiert einen wert von der eingabeskala in die ausgabeskala</span>
 				</pre>
 			</section>
@@ -139,29 +139,29 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>attributes</h1>
 				<pre>
-<strong>background(</strong>farbe<strong>)</strong>
+<strong>background(</strong>farbe<strong>);</strong>
 <span class="descriptors">hintergrundfarbe setzen</span>
 
-<strong>fill(</strong>farbe<strong>)</strong>
+<strong>fill(</strong>farbe<strong>);</strong>
 <span class="descriptors">füllfarbe setzen</span>
 
-<strong>noFill()</strong>
+<strong>noFill();</strong>
 <span class="descriptors">keine füllfarbe</span>
 
-<strong>stroke(</strong>farbe<strong>)</strong>
+<strong>stroke(</strong>farbe<strong>);</strong>
 <span class="descriptors">strichfarbe setzen</span>
 
-<strong>strokeWeight(</strong>stärke<strong>)</strong>
+<strong>strokeWeight(</strong>stärke<strong>);</strong>
 <span class="descriptors">strichstärke einstellen</span>
 
-<strong>noStroke()</strong>
+<strong>noStroke();</strong>
 <span class="descriptors">kein strich zeichnen</span>
 
-<strong>ellipseMode(</strong>modus<strong>)</strong>
-<strong>rectMode(</strong>modus<strong>)</strong>
+<strong>ellipseMode(</strong>modus<strong>);</strong>
+<strong>rectMode(</strong>modus<strong>);</strong>
 <span class="descriptors">CENTER oder CORNER</span>
 
-<strong>textSize(</strong>pixels<strong>)</strong>
+<strong>textSize(</strong>pixels<strong>);</strong>
 				</pre>
 			</section>
 

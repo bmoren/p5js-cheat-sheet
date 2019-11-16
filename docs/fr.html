@@ -53,7 +53,7 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>feedback non-visuel</h1>
 				<pre>
-<strong>print()</strong>
+<strong>print();</strong>
 <span class="descriptors">écrit dans la console</span>
 				</pre>
 			</section>
@@ -61,13 +61,13 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>couleurs</h1>
 				<pre>
-<strong>fill(</strong>120<strong>)</strong> <span class="descriptors">gris: 0-255</span>
-<strong>fill(</strong>100,125,255<strong>)</strong> <span class="descriptors">r, g, b: 0-255</span>
-<strong>fill(</strong>255, 0, 0, 50<strong>)</strong> <span class="descriptors">r, g, b, alpha</span>
-<strong>fill(</strong>'red'<strong>)</strong> <span class="descriptors">couleur par noms</span>
-<strong>fill(</strong>'#ccc'<strong>)</strong> <span class="descriptors">3-digit hex</span>
-<strong>fill(</strong>'#222222'<strong>)</strong> <span class="descriptors">6-digit hex fill</span>
-<strong>color(</strong>0, 0, 255<strong>)</strong> <span class="descriptors">object p5.Color</span>
+<strong>fill(</strong>120<strong>);</strong> <span class="descriptors">gris: 0-255</span>
+<strong>fill(</strong>100,125,255<strong>);</strong> <span class="descriptors">r, g, b: 0-255</span>
+<strong>fill(</strong>255, 0, 0, 50<strong>);</strong> <span class="descriptors">r, g, b, alpha</span>
+<strong>fill(</strong>'red'<strong>);</strong> <span class="descriptors">couleur par noms</span>
+<strong>fill(</strong>'#ccc'<strong>);</strong> <span class="descriptors">3-digit hex</span>
+<strong>fill(</strong>'#222222'<strong>);</strong> <span class="descriptors">6-digit hex fill</span>
+<strong>color(</strong>0, 0, 255<strong>);</strong> <span class="descriptors">object p5.Color</span>
 				</pre>
 			</section>
 		</div>
@@ -76,13 +76,13 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>primitives 2d</h1>
 				<pre>
-<strong>line(</strong>x1, y1, x2, y2<strong>)</strong>
+<strong>line(</strong>x1, y1, x2, y2<strong>);</strong>
 
-<strong>ellipse(</strong>x, y, largeur, hauteur<strong>)</strong>
+<strong>ellipse(</strong>x, y, largeur, hauteur<strong>);</strong>
 
-<strong>rect(</strong>x, y, largeur, hauteur<strong>)</strong>
+<strong>rect(</strong>x, y, largeur, hauteur<strong>);</strong>
 
-<strong>arc(</strong>x, y, largeur, hauteur, start, stop<strong>)</strong>
+<strong>arc(</strong>x, y, largeur, hauteur, start, stop<strong>);</strong>
 
 <strong>beginShape();</strong>
   <strong>vertex(x1, y1);</strong>
@@ -91,7 +91,7 @@ function <strong>draw()</strong>{
   <span class="code-comments">//ajoute plus de vertices</span>
 <strong>endShape(</strong>CLOSE<strong>);</strong>
 
-<strong>text(</strong>"string", x, y, boxwidth, boxheight<strong>)</strong>
+<strong>text(</strong>"string", x, y, boxwidth, boxheight<strong>);</strong>
 				</pre>
 
 				<ul>
@@ -127,9 +127,9 @@ function <strong>draw()</strong>{
 				<pre>
 <strong>+ - / *</strong>
 
-<strong>random(</strong>limite basse,limite haute<strong>)</strong>
+<strong>random(</strong>limite basse,limite haute<strong>);</strong>
 
-<strong>map(</strong>valeur, in1, in2, out1, out2<strong>)</strong>
+<strong>map(</strong>valeur, in1, in2, out1, out2<strong>);</strong>
 <span class="descriptors">map une valeur entre 2 intervales in/out</span>
 				</pre>
 			</section>
@@ -139,29 +139,29 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>attributs</h1>
 				<pre>
-<strong>background(</strong>couleur<strong>)</strong>
+<strong>background(</strong>couleur<strong>);</strong>
 <span class="descriptors">définit la couleur de fond</span>
 
-<strong>fill(</strong>couleur<strong>)</strong>
+<strong>fill(</strong>couleur<strong>);</strong>
 <span class="descriptors">définit la couleur de remplissage</span>
 
-<strong>noFill()</strong>
+<strong>noFill();</strong>
 <span class="descriptors">désactive le remplissage</span>
 
-<strong>stroke(</strong>couleur<strong>)</strong>
+<strong>stroke(</strong>couleur<strong>);</strong>
 <span class="descriptors">définit la couleur de contour</span>
 
-<strong>strokeWeight(</strong>épaisseur<strong>)</strong>
+<strong>strokeWeight(</strong>épaisseur<strong>);</strong>
 <span class="descriptors">définit l’épaisseur de contour</span>
 
-<strong>noStroke()</strong>
+<strong>noStroke();</strong>
 <span class="descriptors">désactive le contour</span>
 
-<strong>ellipseMode(</strong>MODE<strong>)</strong>
-<strong>rectMode(</strong>MODE<strong>)</strong>
+<strong>ellipseMode(</strong>MODE<strong>);</strong>
+<strong>rectMode(</strong>MODE<strong>);</strong>
 <span class="descriptors">CENTER,CORNER</span>
 
-<strong>textSize(</strong>pixels<strong>)</strong>
+<strong>textSize(</strong>pixels<strong>);</strong>
 				</pre>
 			</section>
 
