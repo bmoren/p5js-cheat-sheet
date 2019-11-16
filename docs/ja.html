@@ -53,7 +53,7 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>テキストでのフィードバック</h1>
 				<pre>
-<strong>print(something)</strong>
+<strong>print(something);</strong>
 <span class="descriptors">コンソールにデータを出力して表示</span>
 				</pre>
 			</section>
@@ -61,13 +61,13 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>色</h1>
 				<pre>
-<strong>fill(</strong>120<strong>)</strong> <span class="descriptors">グレースケール:0-255</span>
-<strong>fill(</strong>100,125,255<strong>)</strong> <span class="descriptors">r, g, b: 0-255</span>
-<strong>fill(</strong>255, 0, 0, 50<strong>)</strong> <span class="descriptors">r, g, b, alpha</span>
-<strong>fill(</strong>'red'<strong>)</strong> <span class="descriptors">文字列で色を指定</span>
-<strong>fill(</strong>'#ccc'<strong>)</strong> <span class="descriptors">3桁のHex</span>
-<strong>fill(</strong>'#222222'<strong>)</strong> <span class="descriptors">6桁のHex</span>
-<strong>color(</strong>0, 0, 255<strong>)</strong> <span class="descriptors">p5.Colorオブジェクト</span>
+<strong>fill(</strong>120<strong>);</strong> <span class="descriptors">グレースケール:0-255</span>
+<strong>fill(</strong>100,125,255<strong>);</strong> <span class="descriptors">r, g, b: 0-255</span>
+<strong>fill(</strong>255, 0, 0, 50<strong>);</strong> <span class="descriptors">r, g, b, alpha</span>
+<strong>fill(</strong>'red'<strong>);</strong> <span class="descriptors">文字列で色を指定</span>
+<strong>fill(</strong>'#ccc'<strong>);</strong> <span class="descriptors">3桁のHex</span>
+<strong>fill(</strong>'#222222'<strong>);</strong> <span class="descriptors">6桁のHex</span>
+<strong>color(</strong>0, 0, 255<strong>);</strong> <span class="descriptors">p5.Colorオブジェクト</span>
 				</pre>
 			</section>
 		</div>
@@ -76,13 +76,13 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>2Dのプリミティブ図形</h1>
 				<pre>
-<strong>line(</strong>x1, y1, x2, y2<strong>)</strong>
+<strong>line(</strong>x1, y1, x2, y2<strong>);</strong>
 
-<strong>ellipse(</strong>x, y, width, height<strong>)</strong>
+<strong>ellipse(</strong>x, y, width, height<strong>);</strong>
 
-<strong>rect(</strong>x, y, width, height<strong>)</strong>
+<strong>rect(</strong>x, y, width, height<strong>);</strong>
 
-<strong>arc(</strong>x, y, width, height, start, stop<strong>)</strong>
+<strong>arc(</strong>x, y, width, height, start, stop<strong>);</strong>
 
 <strong>beginShape();</strong>
   <strong>vertex(x1, y1);</strong>
@@ -91,7 +91,7 @@ function <strong>draw()</strong>{
   <span class="code-comments">// 頂点の追加</span>
 <strong>endShape(</strong>CLOSE<strong>);</strong>
 
-<strong>text(</strong>"string", x, y, boxwidth, boxheight<strong>)</strong>
+<strong>text(</strong>"string", x, y, boxwidth, boxheight<strong>);</strong>
 				</pre>
 
 				<ul>
@@ -127,9 +127,9 @@ function <strong>draw()</strong>{
 				<pre>
 <strong>+ - / *</strong>
 
-<strong>random(</strong>low,high<strong>)</strong>
+<strong>random(</strong>low,high<strong>);</strong>
 
-<strong>map(</strong>value, in1, in2, out1, out2<strong>)</strong>
+<strong>map(</strong>value, in1, in2, out1, out2<strong>);</strong>
 <span class="descriptors">入力値の範囲にある値を出力値の範囲にマッピングする</span>
 				</pre>
 			</section>
@@ -139,29 +139,29 @@ function <strong>draw()</strong>{
 			<section>
 				<h1>属性</h1>
 				<pre>
-<strong>background(</strong>color<strong>)</strong>
+<strong>background(</strong>color<strong>);</strong>
 <span class="descriptors">背景色を設定</span>
 
-<strong>fill(</strong>color<strong>)</strong>
+<strong>fill(</strong>color<strong>);</strong>
 <span class="descriptors">塗りつぶしの色を設定</span>
 
-<strong>noFill()</strong>
+<strong>noFill();</strong>
 <span class="descriptors">塗りつぶしを無効</span>
 
-<strong>stroke(</strong>color<strong>)</strong>
+<strong>stroke(</strong>color<strong>);</strong>
 <span class="descriptors">線の色を設定</span>
 
-<strong>strokeWeight(</strong>weight<strong>)</strong>
+<strong>strokeWeight(</strong>weight<strong>);</strong>
 <span class="descriptors">線の太さを設定</span>
 
-<strong>noStroke()</strong>
+<strong>noStroke();</strong>
 <span class="descriptors">線を無効</span>
 
-<strong>ellipseMode(</strong>MODE<strong>)</strong>
-<strong>rectMode(</strong>MODE<strong>)</strong>
+<strong>ellipseMode(</strong>MODE<strong>);</strong>
+<strong>rectMode(</strong>MODE<strong>);</strong>
 <span class="descriptors">CENTER,CORNER</span>
 
-<strong>textSize(</strong>pixels<strong>)</strong>
+<strong>textSize(</strong>pixels<strong>);</strong>
 				</pre>
 			</section>
 
