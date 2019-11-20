@@ -146,6 +146,8 @@ a:hover{
 		font-size: 9.5pt;
 	}
 
+	#print:hover{cursor:pointer;}
+
 	#cheat-sheet{
 		display: flex;
 		justify-content: space-between;
