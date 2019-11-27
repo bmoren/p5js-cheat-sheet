@@ -5,11 +5,11 @@ This is a [web based cheat sheet]() to help folks get started with [p5.js](http:
 + [English](https://bmoren.github.io/p5js-cheat-sheet/)
   + Translation by: [Ben Moren](https://github.com/bmoren)
 + [French](https://bmoren.github.io/p5js-cheat-sheet/fr.html)
-  + Translation by: @rich-gg
+  + Translation by: [@rich-gg](https://github.com/rich-gg)
 + [Japanese](https://bmoren.github.io/p5js-cheat-sheet/ja.html)
-  + Translation by: Takawo Shunsuke
+  + Translation by: [Takawo Shunsuke](https://twitter.com/takawo)
 + [German](https://bmoren.github.io/p5js-cheat-sheet/de.html)
-   + Translation by: Philipp Lehmann
+   + Translation by: [Philipp Lehmann](https://github.com/philipp-lehmann)
 + [Nederlands](https://bmoren.github.io/p5js-cheat-sheet/nl.html)
   + Translation by: [Vincent Sijben](https://github.com/vincentsijben)
 
@@ -30,4 +30,4 @@ coming soon!
 
 With thanks to past cheat sheets like [Ryo Sakai's p5.js sheet](https://twitter.com/ryodejaneiro/status/827314983948210176) !
 
-Special thanks to Kenneth Lim @limzykenneth for initializing the HTML version which will make this cheat sheet much easier to translate.
+Special thanks to [Kenneth Lim](https://github.com/limzykenneth) for initializing the HTML version which will make this cheat sheet much easier to translate.
