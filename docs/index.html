@@ -1,213 +1,239 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>p5.js Cheat Sheet</title>
 	<meta http-equiv="pragma" content="no-cache" />
 	<meta http-equiv="cache-control" content="no-cache" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" type="text/css" href="./style.css" media="all">
-
-	<script src="p5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" href="prism.css">
 
 </head>
+
 <body>
 
-<!-- Include the menu, there's likely a more elegent way to do this -->
-<script src="menu.js"></script>
+	<!-- Include the menu, there's likely a more elegent way to do this -->
+	<script src="menu.js"></script>
 
-	<article id="cheat-sheet">
-		<div class="column">
+		<article id="cheat-sheet">
+			<div class="column">
+
 			<header>
 				<h1 id="title">p5.js</h1>
-				<p id="subtitle">a cheat sheet for beginners!</p>
+				<p id="subtitle">a cheat sheet <br> for beginners!</p>
 			</header>
 
 			<section>
 				<h1>program structure</h1>
-				<pre>
-<span class="code-comments">//runs once when program starts</span>
-function <strong>setup()</strong>{
-  createCanvas(800,600);
+				<pre><code class="language-javaScript">//runs once when program starts
+function setup(){
+  createCanvas(800,600); //width,height in pixels
 }
 
-<span class="code-comments">//run continuously after setup</span>
-function <strong>draw()</strong>{
-  <span class="code-comments">//rendering loop</span>
+//run continuously after setup
+function draw(){
+  //rendering loop
 }
-				</pre>
+</code></pre>
 			</section>
 
 			<section>
 				<h1>system variables</h1>
-				<pre>
-<strong>windowWidth / windowHeight</strong>
-<span class="descriptors">width / height of window</span>
+				<pre><code class="language-javaScript">windowWidth / windowHeight
+//width / height of window
 
-<strong>width / height</strong>
-<span class="descriptors">width / height of canvas</span>
+width / height
+//width / height of canvas
 
-<strong>mouseX / mouseY</strong>
-<span class="descriptors">current horizontal / vertical mouse position</span>
-				</pre>
+mouseX / mouseY
+//current horizontal / vertical mouse position
+</code></pre>
 			</section>
 
 			<section>
 				<h1>non-visual feedback</h1>
-				<pre>
-<strong>print();</strong>
-<span class="descriptors">report data to the output console</span>
-				</pre>
+				<pre><code class="language-javaScript">print();
+//report data to the output console
+
+//double slash to comment code (program skips it)
+</code></pre>
 			</section>
 
 			<section>
 				<h1>color</h1>
-				<pre>
-<strong>fill(</strong>120<strong>);</strong> <span class="descriptors">gray: 0-255</span>
-<strong>fill(</strong>100,125,255<strong>);</strong> <span class="descriptors">r, g, b: 0-255</span>
-<strong>fill(</strong>255, 0, 0, 50<strong>);</strong> <span class="descriptors">r, g, b, alpha</span>
-<strong>fill(</strong>'red'<strong>);</strong> <span class="descriptors">color string</span>
-<strong>fill(</strong>'#ccc'<strong>);</strong> <span class="descriptors">3-digit hex</span>
-<strong>fill(</strong>'#222222'<strong>);</strong> <span class="descriptors">6-digit hex fill</span>
-<strong>color(</strong>0, 0, 255<strong>);</strong> <span class="descriptors">p5.Color object</span>
-				</pre>
+				<pre><code class="language-javaScript">fill(120); //gray: 0-255
+fill(100,125,255); //r, g, b: 0-255
+fill(255, 0, 0, 50); //r, g, b, alpha
+fill('red'); //color string
+fill('#ccc'); //3-digit hex
+fill('#222222'); //6-digit hex fill
+color(0, 0, 255); //p5.Color object
+</code></pre>
 			</section>
+
+
+	</div>
+	<!-- End First Col -->
+
+	<div class="column">
+
+		<section>
+			<h1>math</h1>
+			<pre><code class="language-javaScript">+ - / *  //basic math operators
+
+random(low,high); //ranged random number
+
+map(value, in1, in2, out1, out2);
+//map a value from input range to output range
+</code></pre>
+		</section>
+
+<!-- CONSIDERING ADDING THIS HERE AND MOVING MATH TO THE BOTTOM OF COL 1, THOGUHTS? -->
+		<!-- <section>
+			<h1>variable definition</h1>
+			<pre><code class="language-javaScript">//let & keyword defines a variable
+// use single = to store data in the variable
+let variableName = 100;
+let myWords = "a string of text!";
+let randStorage = random(0,255); // store returned data
+</code></pre>
+		</section> -->
+
+		<section>
+			<h1>2d primitives</h1>
+			<pre><code class="language-javaScript">line(x1, y1, x2, y2);
+
+ellipse(x, y, width, height);
+
+rect(x, y, width, height);
+
+arc(x, y, width, height, start, stop);
+
+beginShape();
+  vertex(x1, y1);
+  vertex(x2, y2);
+  vertex(x3, y3);
+  //add more vertex
+endShape(CLOSE);
+
+text("string", x, y, boxwidth, boxheight);
+</code></pre>
+
+			<ul>
+				<li class="canvas-container">
+					<h2>grid system</h2>
+					<div id="grid-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>line()</h2>
+					<div id="line-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>ellipse()</h2>
+					<div id="ellipse-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>rect()</h2>
+					<div id="rect-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>arc()</h2>
+					<div id="arc-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>vertex()</h2>
+					<div id="vertex-canvas"></div>
+				</li>
+			</ul>
+		</section>
+
+
+
+	</div>
+	<!-- End Second Col -->
+	<div class="column">
+
+		<section>
+			<h1>attributes</h1>
+			<pre><code class="language-javaScript">background(color);
+//set the background color
+
+fill(color);
+//set the fill color
+
+noFill();
+//disables fill
+
+stroke(color);
+//set the stroke color
+
+strokeWeight(weight);
+//set the stroke’s width in pixels
+
+noStroke();
+//disables stroke
+
+ellipseMode(MODE);
+rectMode(MODE);
+//CENTER,CORNER
+
+textSize(pixels);
+</code></pre>
+		</section>
+
+		<section>
+			<h1>if/then logic</h1>
+			<div class="logic">
+				<pre><code class="language-javaScript">if(test){
+  //statements
+}
+
+==  //equal to (double is important)
+!=  //not equal
+>   //greater than
+<   //less than
+>=  //greater than or equal
+<=  //less than or equal
+
+</code></pre>
+<div id="ifelse-canvas"></div>
+
 		</div>
 
-		<div class="column">
-			<section>
-				<h1>2d primitives</h1>
-				<pre>
-<strong>line(</strong>x1, y1, x2, y2<strong>);</strong>
+		</section>
 
-<strong>ellipse(</strong>x, y, width, height<strong>);</strong>
+		<footer>
+			Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC-BY-SA-NC-4.0
+			<br>
+			Translation by Ben Moren
+		</footer>
 
-<strong>rect(</strong>x, y, width, height<strong>);</strong>
+	</div>
 
-<strong>arc(</strong>x, y, width, height, start, stop<strong>);</strong>
-
-<strong>beginShape();</strong>
-  <strong>vertex(x1, y1);</strong>
-  <strong>vertex(x2, y2);</strong>
-  <strong>vertex(x3, y3);</strong>
-  <span class="code-comments">//add more vertex</span>
-<strong>endShape(</strong>CLOSE<strong>);</strong>
-
-<strong>text(</strong>"string", x, y, boxwidth, boxheight<strong>);</strong>
-				</pre>
-
-				<ul>
-					<li class="canvas-container">
-						<h2>grid system</h2>
-						<div id="grid-canvas"></div>
-					</li>
-					<li class="canvas-container">
-						<h2>line()</h2>
-						<div id="line-canvas"></div>
-					</li>
-					<li class="canvas-container">
-						<h2>ellipse()</h2>
-						<div id="ellipse-canvas"></div>
-					</li>
-					<li class="canvas-container">
-						<h2>rect()</h2>
-						<div id="rect-canvas"></div>
-					</li>
-					<li class="canvas-container">
-						<h2>arc()</h2>
-						<div id="arc-canvas"></div>
-					</li>
-					<li class="canvas-container">
-						<h2>vertex()</h2>
-						<div id="vertex-canvas"></div>
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h1>math</h1>
-				<pre>
-<strong>+ - / *</strong>
-
-<strong>random(</strong>low,high<strong>);</strong>
-
-<strong>map(</strong>value, in1, in2, out1, out2<strong>);</strong>
-<span class="descriptors">map a value from input to output range</span>
-				</pre>
-			</section>
-		</div>
-
-		<div class="column">
-			<section>
-				<h1>attributes</h1>
-				<pre>
-<strong>background(</strong>color<strong>);</strong>
-<span class="descriptors">set the background color</span>
-
-<strong>fill(</strong>color<strong>);</strong>
-<span class="descriptors">set the fill color</span>
-
-<strong>noFill();</strong>
-<span class="descriptors">disables fill</span>
-
-<strong>stroke(</strong>color<strong>);</strong>
-<span class="descriptors">set the stroke color</span>
-
-<strong>strokeWeight(</strong>weight<strong>);</strong>
-<span class="descriptors">set the stroke’s width</span>
-
-<strong>noStroke();</strong>
-<span class="descriptors">disables stroke</span>
-
-<strong>ellipseMode(</strong>MODE<strong>);</strong>
-<strong>rectMode(</strong>MODE<strong>);</strong>
-<span class="descriptors">CENTER,CORNER</span>
-
-<strong>textSize(</strong>pixels<strong>);</strong>
-				</pre>
-			</section>
-
-			<section>
-				<h1>if/then logic</h1>
-				<pre>
-
-<strong>if(</strong>test<strong>){</strong>
-  statements
-<strong>}</strong>
-
-== equal to
-!= not equal
->  greater than
-<  less than
->= greater than or equal
-<= less than or equal
-
-				</pre>
-				<div id="ifelse-canvas"></div>
-			</section>
-		</div>
 	</article>
 
-	<footer>
-		Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC BY SA NC 4.0
-	</footer>
 
 	<script type="text/javascript">
-
-	// Terms to translate for diagrams
-	var terms = {
-		"width": "width",
-		"height": "height",
-		"stop": "stop",
-		"start": "start",
-		"true": "true",
-		"false": "false",
-		"continue_program": "continue program",
-		"test": "test",
-		"statements": "statements"
-	};
-
+		// Terms to translate for diagrams
+		var terms = {
+			"width": "width",
+			"height": "height",
+			"stop": "stop",
+			"start": "start",
+			"true": "true",
+			"false": "false",
+			"continue_program": "continue program",
+			"test": "test",
+			"statements": "statements"
+		};
 	</script>
 
+	<script src="prism.js"></script>
+	<script src="p5.min.js"></script>
 	<script src="diagram.js"></script>
 </body>
+
 </html>

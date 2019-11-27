@@ -5,12 +5,11 @@
 	<meta http-equiv="pragma" content="no-cache" />
 	<meta http-equiv="cache-control" content="no-cache" />
 
-	<link rel="stylesheet" type="text/css" href="./style.css" media="all">
-
-	<script src="p5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="prism.css" media="all">
 
 </head>
-<body>
+<body id="ja">
 	<!-- Include the menu, there's likely a more elegent way to do this -->
 	<script src="menu.js"></script>
 
@@ -23,76 +22,84 @@
 
 			<section>
 				<h1>プログラムの構造</h1>
-				<pre>
-<span class="code-comments">// プログラムが開始するとき一度だけ実行</span>
-function <strong>setup()</strong>{
+				<pre><code class="language-javaScript">// プログラムが開始するとき一度だけ実行
+function setup(){
   createCanvas(800,600);
 }
 
-<span class="code-comments">// setupが実行された後，継続して実行</span>
-function <strong>draw()</strong>{
-  <span class="code-comments">// レンダリングのループ</span>
+// setupが実行された後，継続して実行
+function draw(){
+  // レンダリングのループ
 }
-				</pre>
+</code></pre>
 			</section>
 
 			<section>
 				<h1>システム変数</h1>
-				<pre>
-<strong>windowWidth / windowHeight</strong>
-<span class="descriptors">ウィンドウの 幅 / 高さ</span>
+				<pre><code class="language-javaScript">windowWidth / windowHeight
+//ウィンドウの 幅 / 高さ
 
-<strong>width / height</strong>
-<span class="descriptors">キャンバスの 幅 / 高さ</span>
+width / height
+//キャンバスの 幅 / 高さ
 
-<strong>mouseX / mouseY</strong>
-<span class="descriptors">現在の 水平(X方向) / 垂直(Y方向)のマウス位置</span>
-				</pre>
+mouseX / mouseY
+//現在の 水平(X方向) / 垂直(Y方向)のマウス位置
+</code></pre>
 			</section>
 
 			<section>
 				<h1>テキストでのフィードバック</h1>
-				<pre>
-<strong>print(something);</strong>
-<span class="descriptors">コンソールにデータを出力して表示</span>
-				</pre>
+				<pre><code class="language-javaScript">
+print(something);
+//コンソールにデータを出力して表示
+</code></pre>
 			</section>
 
 			<section>
 				<h1>色</h1>
-				<pre>
-<strong>fill(</strong>120<strong>);</strong> <span class="descriptors">グレースケール:0-255</span>
-<strong>fill(</strong>100,125,255<strong>);</strong> <span class="descriptors">r, g, b: 0-255</span>
-<strong>fill(</strong>255, 0, 0, 50<strong>);</strong> <span class="descriptors">r, g, b, alpha</span>
-<strong>fill(</strong>'red'<strong>);</strong> <span class="descriptors">文字列で色を指定</span>
-<strong>fill(</strong>'#ccc'<strong>);</strong> <span class="descriptors">3桁のHex</span>
-<strong>fill(</strong>'#222222'<strong>);</strong> <span class="descriptors">6桁のHex</span>
-<strong>color(</strong>0, 0, 255<strong>);</strong> <span class="descriptors">p5.Colorオブジェクト</span>
-				</pre>
+				<pre><code class="language-javaScript">fill(120); //グレースケール:0-255
+fill(100,125,255); //r, g, b: 0-255
+fill(255, 0, 0, 50); //r, g, b, alpha
+fill('red'); //文字列で色を指定
+fill('#ccc'); //3桁のHex
+fill('#222222'); //6桁のHex
+color(0, 0, 255); //p5.Colorオブジェクト
+</code></pre>
 			</section>
 		</div>
 
 		<div class="column">
+
+			<section>
+				<h1>数値計算</h1>
+				<pre><code class="language-javaScript">+ - / *
+
+random(low,high);
+
+map(value, in1, in2, out1, out2);
+//入力値の範囲にある値を出力値の範囲にマッピングする
+</code></pre>
+			</section>
+
 			<section>
 				<h1>2Dのプリミティブ図形</h1>
-				<pre>
-<strong>line(</strong>x1, y1, x2, y2<strong>);</strong>
+				<pre><code class="language-javaScript">line(x1, y1, x2, y2);
 
-<strong>ellipse(</strong>x, y, width, height<strong>);</strong>
+ellipse(x, y, width, height);
 
-<strong>rect(</strong>x, y, width, height<strong>);</strong>
+rect(x, y, width, height);
 
-<strong>arc(</strong>x, y, width, height, start, stop<strong>);</strong>
+arc(x, y, width, height, start, stop);
 
-<strong>beginShape();</strong>
-  <strong>vertex(x1, y1);</strong>
-  <strong>vertex(x2, y2);</strong>
-  <strong>vertex(x3, y3);</strong>
-  <span class="code-comments">// 頂点の追加</span>
-<strong>endShape(</strong>CLOSE<strong>);</strong>
+beginShape();
+  vertex(x1, y1);
+  vertex(x2, y2);
+  vertex(x3, y3);
+  // 頂点の追加
+endShape(CLOSE);
 
-<strong>text(</strong>"string", x, y, boxwidth, boxheight<strong>);</strong>
-				</pre>
+text("string", x, y, boxwidth, boxheight);
+</code></pre>
 
 				<ul>
 					<li class="canvas-container">
@@ -122,77 +129,66 @@ function <strong>draw()</strong>{
 				</ul>
 			</section>
 
-			<section>
-				<h1>数値計算</h1>
-				<pre>
-<strong>+ - / *</strong>
-
-<strong>random(</strong>low,high<strong>);</strong>
-
-<strong>map(</strong>value, in1, in2, out1, out2<strong>);</strong>
-<span class="descriptors">入力値の範囲にある値を出力値の範囲にマッピングする</span>
-				</pre>
-			</section>
 		</div>
 
 		<div class="column">
 			<section>
 				<h1>属性</h1>
-				<pre>
-<strong>background(</strong>color<strong>);</strong>
-<span class="descriptors">背景色を設定</span>
+				<pre><code class="language-javaScript">background(color);
+//背景色を設定
 
-<strong>fill(</strong>color<strong>);</strong>
-<span class="descriptors">塗りつぶしの色を設定</span>
+fill(color);
+//塗りつぶしの色を設定
 
-<strong>noFill();</strong>
-<span class="descriptors">塗りつぶしを無効</span>
+noFill();
+//塗りつぶしを無効
 
-<strong>stroke(</strong>color<strong>);</strong>
-<span class="descriptors">線の色を設定</span>
+stroke(color);
+//線の色を設定
 
-<strong>strokeWeight(</strong>weight<strong>);</strong>
-<span class="descriptors">線の太さを設定</span>
+strokeWeight(weight);
+//線の太さを設定
 
-<strong>noStroke();</strong>
-<span class="descriptors">線を無効</span>
+noStroke();
+//線を無効
 
-<strong>ellipseMode(</strong>MODE<strong>);</strong>
-<strong>rectMode(</strong>MODE<strong>);</strong>
-<span class="descriptors">CENTER,CORNER</span>
+ellipseMode(MODE);
+rectMode(MODE);
+//CENTER,CORNER
 
-<strong>textSize(</strong>pixels<strong>);</strong>
-				</pre>
+textSize(pixels);
+</code></pre>
 			</section>
 
 			<section>
 				<h1>条件分岐</h1>
-				<pre>
 
-<strong>if(</strong>test<strong>){</strong>
-  statements
-<strong>}</strong>
+				<div class="logic">
+				<pre><code class="language-javaScript">if(test){
+  //statements
+}
 
 == 等しい
 != 等しくない
 >  より大きい
 <  より小さい
 >= 以上
-<= 以下
-
-				</pre>
+<= 以下</code></pre>
 				<div id="ifelse-canvas"></div>
 			</section>
+
+			<footer>
+				Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC BY SA NC 4.0 <br>
+				Translation by: <a href="https://twitter.com/takawo">Takawo Shunsuke</a>
+			</footer>
+		</div>
 		</div>
 	</article>
 
-	<footer>
-		Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC BY SA NC 4.0 <br>
-		Translation by: Takawo Shunsuke
-	</footer>
+
 
 	<script type="text/javascript">
-	
+
 
 	// Terms to translate for diagrams
 	var terms = {
@@ -207,10 +203,12 @@ function <strong>draw()</strong>{
 		"statements": "statements"
 	};
 
-	
+
 
 
 	</script>
+	<script src="prism.js"></script>
+	<script src="p5.min.js"></script>
 	<script src="diagram.js"></script>
 </body>
 </html>

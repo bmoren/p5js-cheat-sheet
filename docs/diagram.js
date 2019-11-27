@@ -1,12 +1,14 @@
 var canvasSize = 220;
 var p5Pink = "#ed225d";
+let txtSz = 18
+let fontFile = 'fonts/FiraCode-Bold.otf'
 
 var gridSketch = function(p){
 	var canvas;
 
 	var fira;
 	p.preload = function(){
-		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+		fira = p.loadFont(fontFile);
 	}
 
 	p.setup = function(){
@@ -28,6 +30,7 @@ var gridSketch = function(p){
 		p.fill("#000000");
 		p.ellipse(0, 0, gridSize/20, gridSize/20);
 
+		p.textSize(txtSz);
 		p.textAlign(p.LEFT, p.TOP);
 		p.textFont(fira);
 		p.text("(0,0)", 5, 5);
@@ -39,7 +42,7 @@ var lineSketch = function(p){
 
 	var fira;
 	p.preload = function(){
-		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+		fira = p.loadFont(fontFile);
 	}
 
 	p.setup = function(){
@@ -68,10 +71,11 @@ var lineSketch = function(p){
 		p.strokeWeight(2);
 		p.line(x1, y1, x2, y2);
 
+		p.textSize(txtSz);
 		p.textFont(fira);
 		p.noStroke();
 		p.textAlign(p.RIGHT, p.BOTTOM);
-		p.text("(x1,y1)", x1-5, y1-5);
+		p.text("(x1,y1)", x1+10, y1-10);
 
 		p.textAlign(p.CENTER, p.TOP);
 		p.text("(x2,y2)", x2+5, y2+10);
@@ -83,7 +87,7 @@ var ellipseSketch = function(p){
 
 	var fira;
 	p.preload = function(){
-		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+		fira = p.loadFont(fontFile);
 	}
 
 	p.setup = function(){
@@ -113,6 +117,7 @@ var ellipseSketch = function(p){
 		p.fill("#000000");
 		p.ellipse(x, y, gridSize/20, gridSize/20);
 
+		p.textSize(txtSz);
 		p.textFont(fira);
 		p.noStroke();
 		p.textAlign(p.CENTER, p.BOTTOM);
@@ -138,13 +143,14 @@ var rectSketch = function(p){
 
 	var fira;
 	p.preload = function(){
-		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+		fira = p.loadFont(fontFile);
 	}
 
 	p.setup = function(){
 		canvas = p.createCanvas(canvasSize, canvasSize);
 		canvas.parent("rect-canvas");
 		p.strokeWeight(0.25);
+		p.textSize(txtSz);
 		p.textFont(fira);
 		p.push();
 		p.translate(canvasSize/20, canvasSize/15);
@@ -161,6 +167,7 @@ var rectSketch = function(p){
 		var y = gridSize / 10 * 2;
 		p.stroke("#000000");
 		p.strokeWeight(2);
+
 		p.fill(p5Pink);
 		p.rect(x, y, gridSize / 10 * 5, gridSize / 10 * 5);
 
@@ -182,7 +189,7 @@ var rectSketch = function(p){
 		p.push();
 		p.translate(p.width/2, p.height/2);
 		p.rotate(-p.PI/2);
-		p.text(terms.height, -10, (gridSize/10*5) / 2 + 7);
+		p.text(terms.height, -25, (gridSize/10*5) / 2 + 7);
 		p.pop();
 	};
 };
@@ -192,7 +199,7 @@ var arcSketch = function(p){
 
 	var fira;
 	p.preload = function(){
-		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+		fira = p.loadFont(fontFile);
 	}
 
 	p.setup = function(){
@@ -218,7 +225,7 @@ var arcSketch = function(p){
 		p.stroke("#000000");
 		p.strokeWeight(2);
 		p.translate(p.width/2, p.height/2);
-		p.arc(x, y, gridSize / 10 * 7.5, gridSize / 10 * 7.5, p.PI / 2, 2 * p.PI);
+		p.arc(x, y, gridSize / 10 * 7, gridSize / 10 * 7, p.PI / 2, 2 * p.PI);
 
 		p.noStroke();
 		p.fill("#000000");
@@ -226,25 +233,26 @@ var arcSketch = function(p){
 		p.pop();
 
 		p.push();
-		p.translate(p.width/2, p.height/2);
+			p.translate(p.width/2, p.height/2);
+			p.textSize(txtSz);
 			p.textFont(fira);
 			p.textAlign(p.CENTER, p.BOTTOM);
-			p.text("(x,y)", 0, -10);
+			p.text("(x,y)", 0, -15);
 
 			p.textAlign(p.CENTER, p.TOP);
-			p.text(terms.width, 0, gridSize / 10 * 7.5 / 2 + 5);
+			p.text(terms.width, 0, gridSize / 10 * 7.5 / 2 );
 
 			p.text(terms.stop, gridSize / 10 * 6.5 / 4, 3)
 
 			p.push();
 				p.rotate(p.PI/2);
-				p.text(terms.start, gridSize / 10 * 7.5 / 4, 3);
+				p.text(terms.start, gridSize / 10 * 7.0 / 4, 0);
 			p.pop();
 
 			p.push();
 				p.rotate(-p.PI/2);
 				p.textAlign(p.CENTER, p.BOTTOM);
-				p.text(terms.height, 0, -gridSize / 10 * 7.5 / 2 - 5);
+				p.text(terms.height, 0, -gridSize / 10 * 7.5 / 2 );
 			p.pop();
 		p.pop();
 	};
@@ -255,7 +263,7 @@ var vertexSketch = function(p){
 
 	var fira;
 	p.preload = function(){
-		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+		fira = p.loadFont(fontFile);
 	}
 
 	p.setup = function(){
@@ -295,12 +303,13 @@ var vertexSketch = function(p){
 		p.ellipse(x3, y3, gridSize/20, gridSize/20);
 
 		p.textAlign(p.CENTER, p.BOTTOM);
+		p.textSize(txtSz);
 		p.textFont(fira);
-		p.text("(x1,y1)", x1, y1 - 7);
+		p.text("(x1,y1)", x1 +7, y1 - 7);
 
 		p.textAlign(p.CENTER, p.TOP);
-		p.text("(x2,y2)", x2, y2 + 10);
-		p.text("(x3,y3)", x3, y3 + 7);
+		p.text("(x2,y2)", x2+7, y2 + 10);
+		p.text("(x3,y3)", x3+7, y3 + 7);
 	};
 };
 
@@ -309,11 +318,11 @@ var ifelseSketch = function(p){
 
 	var fira;
 	p.preload = function(){
-		fira = p.loadFont('fonts/FiraCode-Bold.otf');
+		fira = p.loadFont(fontFile);
 	}
 
 	p.setup = function(){
-		canvas = p.createCanvas(215, 245);
+		canvas = p.createCanvas(225, 235);
 		canvas.parent("ifelse-canvas");
 		p.translate(5, 5);
 

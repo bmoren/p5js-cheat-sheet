@@ -5,9 +5,8 @@
 	<meta http-equiv="pragma" content="no-cache" />
 	<meta http-equiv="cache-control" content="no-cache" />
 
-	<link rel="stylesheet" type="text/css" href="./style.css" media="all">
-
-	<script src="p5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="prism.css" media="all">
 
 </head>
 <body>
@@ -18,81 +17,88 @@
 		<div class="column">
 			<header>
 				<h1 id="title">p5.js</h1>
-				<p id="subtitle"> l’antiseche des débutants</p>
+				<p id="subtitle">l’antiseche <br> des débutants</p>
 			</header>
 
 			<section>
 				<h1>structure du programme</h1>
-				<pre>
-<span class="code-comments">//tourne une fois, au démarrage</span>
-function <strong>setup()</strong>{
+				<pre><code class="language-javaScript">//tourne une fois, au démarrage
+function setup(){
   createCanvas(800,600);
 }
 
-<span class="code-comments">//tourne en boucle, aprés setup()</span>
-function <strong>draw()</strong>{
-  <span class="code-comments">//instructions de dessin</span>
+//tourne en boucle, aprés setup()
+function draw(){
+  //instructions de dessin
 }
-				</pre>
+</code></pre>
 			</section>
 
 			<section>
 				<h1>variables système</h1>
-				<pre>
-<strong>windowWidth / windowHeight</strong>
-<span class="descriptors">largeur / hauteur de fenêtre</span>
+				<pre><code class="language-javaScript">windowWidth / windowHeight
+//largeur / hauteur de fenêtre
 
-<strong>width / height</strong>
-<span class="descriptors">largueur / hauteur de la toile</span>
+width / height
+//largueur / hauteur de la toile
 
-<strong>mouseX / mouseY</strong>
-<span class="descriptors">position horizontale / verticale actuelle de la souris</span>
-				</pre>
+mouseX / mouseY
+//position horizontale / verticale actuelle de la souris
+</code></pre>
 			</section>
 
 			<section>
 				<h1>feedback non-visuel</h1>
-				<pre>
-<strong>print();</strong>
-<span class="descriptors">écrit dans la console</span>
-				</pre>
+				<pre><code class="language-javaScript">print();
+//écrit dans la console
+</code></pre>
 			</section>
 
 			<section>
 				<h1>couleurs</h1>
-				<pre>
-<strong>fill(</strong>120<strong>);</strong> <span class="descriptors">gris: 0-255</span>
-<strong>fill(</strong>100,125,255<strong>);</strong> <span class="descriptors">r, g, b: 0-255</span>
-<strong>fill(</strong>255, 0, 0, 50<strong>);</strong> <span class="descriptors">r, g, b, alpha</span>
-<strong>fill(</strong>'red'<strong>);</strong> <span class="descriptors">couleur par noms</span>
-<strong>fill(</strong>'#ccc'<strong>);</strong> <span class="descriptors">3-digit hex</span>
-<strong>fill(</strong>'#222222'<strong>);</strong> <span class="descriptors">6-digit hex fill</span>
-<strong>color(</strong>0, 0, 255<strong>);</strong> <span class="descriptors">object p5.Color</span>
-				</pre>
+				<pre><code class="language-javaScript">fill(120); //gris: 0-255
+fill(100,125,255); //r, g, b: 0-255
+fill(255, 0, 0, 50); //r, g, b, alpha
+fill('red'); //couleur par noms
+fill('#ccc'); //3-digit hex
+fill('#222222'); //6-digit hex fill
+color(0, 0, 255); //object p5.Color
+</code></pre>
 			</section>
 		</div>
 
 		<div class="column">
+
+			<section>
+				<h1>math</h1>
+				<pre><code class="language-javaScript">+ - / *
+
+random(limite basse,limite haute);
+
+map(valeur, in1, in2, out1, out2);
+//map une valeur entre 2 intervales in/out
+</code></pre>
+			</section>
+
 			<section>
 				<h1>primitives 2d</h1>
-				<pre>
-<strong>line(</strong>x1, y1, x2, y2<strong>);</strong>
+				<pre><code class="language-javaScript">line(x1, y1, x2, y2);
 
-<strong>ellipse(</strong>x, y, largeur, hauteur<strong>);</strong>
+ellipse(x, y, largeur, hauteur);
 
-<strong>rect(</strong>x, y, largeur, hauteur<strong>);</strong>
+rect(x, y, largeur, hauteur);
 
-<strong>arc(</strong>x, y, largeur, hauteur, start, stop<strong>);</strong>
+arc(x, y, largeur, hauteur, start, stop);
 
-<strong>beginShape();</strong>
-  <strong>vertex(x1, y1);</strong>
-  <strong>vertex(x2, y2);</strong>
-  <strong>vertex(x3, y3);</strong>
-  <span class="code-comments">//ajoute plus de vertices</span>
-<strong>endShape(</strong>CLOSE<strong>);</strong>
+beginShape();
+  vertex(x1, y1);
+  vertex(x2, y2);
+  vertex(x3, y3);
+  //ajoute plus de vertices
+endShape(CLOSE);
 
-<strong>text(</strong>"string", x, y, boxwidth, boxheight<strong>);</strong>
-				</pre>
+text("string", x, y, boxwidth, boxheight);
+</code></pre>
 
 				<ul>
 					<li class="canvas-container">
@@ -122,74 +128,64 @@ function <strong>draw()</strong>{
 				</ul>
 			</section>
 
-			<section>
-				<h1>math</h1>
-				<pre>
-<strong>+ - / *</strong>
-
-<strong>random(</strong>limite basse,limite haute<strong>);</strong>
-
-<strong>map(</strong>valeur, in1, in2, out1, out2<strong>);</strong>
-<span class="descriptors">map une valeur entre 2 intervales in/out</span>
-				</pre>
-			</section>
 		</div>
 
 		<div class="column">
 			<section>
 				<h1>attributs</h1>
-				<pre>
-<strong>background(</strong>couleur<strong>);</strong>
-<span class="descriptors">définit la couleur de fond</span>
+				<pre><code class="language-javaScript">background(couleur);
+//définit la couleur de fond
 
-<strong>fill(</strong>couleur<strong>);</strong>
-<span class="descriptors">définit la couleur de remplissage</span>
+fill(couleur);
+//définit la couleur de remplissage
 
-<strong>noFill();</strong>
-<span class="descriptors">désactive le remplissage</span>
+noFill();
+//désactive le remplissage
 
-<strong>stroke(</strong>couleur<strong>);</strong>
-<span class="descriptors">définit la couleur de contour</span>
+stroke(couleur);
+//définit la couleur de contour
 
-<strong>strokeWeight(</strong>épaisseur<strong>);</strong>
-<span class="descriptors">définit l’épaisseur de contour</span>
+strokeWeight(épaisseur);
+//définit l’épaisseur de contour
 
-<strong>noStroke();</strong>
-<span class="descriptors">désactive le contour</span>
+noStroke();
+//désactive le contour
 
-<strong>ellipseMode(</strong>MODE<strong>);</strong>
-<strong>rectMode(</strong>MODE<strong>);</strong>
-<span class="descriptors">CENTER,CORNER</span>
+ellipseMode(MODE);
+rectMode(MODE);
+//CENTER,CORNER
 
-<strong>textSize(</strong>pixels<strong>);</strong>
-				</pre>
+textSize(pixels);
+</code></pre>
 			</section>
 
 			<section>
 				<h1>logique if/then</h1>
-				<pre>
+				<div class="logic">
 
-<strong>if(</strong>condition<strong>){</strong>
-  instructions
-<strong>}</strong>
+				<pre><code class="language-javaScript">if(condition){
+  //instructions
+}
 
 == égal à
 != différent de
 >  supérieur à
 <  inférieur à
 >= supérieur ou égal à
-<= inférieur ou égal à
-
-				</pre>
+<= inférieur ou égal à</code></pre>
 				<div id="ifelse-canvas"></div>
+			</div>
+
+			<footer>
+				Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC BY SA NC 4.0<br/>
+				Translation By <a href="https://github.com/rich-gg">@rich-gg</a>
+			</footer>
+
 			</section>
 		</div>
 	</article>
 
-	<footer>
-		Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC BY SA NC 4.0<br/>
-		Translation By @rich-gg
-	</footer>
+
 
 	<script type="text/javascript">
 
@@ -207,6 +203,8 @@ function <strong>draw()</strong>{
 	};
 
 	</script>
+	<script src="prism.js"></script>
+	<script src="p5.min.js"></script>
 	<script src="diagram.js"></script>
 </body>
 </html>

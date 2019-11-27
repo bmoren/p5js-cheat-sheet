@@ -5,9 +5,8 @@
 	<meta http-equiv="pragma" content="no-cache" />
 	<meta http-equiv="cache-control" content="no-cache" />
 
-	<link rel="stylesheet" type="text/css" href="./style.css" media="all">
-
-	<script src="p5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="prism.css" media="all">
 
 </head>
 <body>
@@ -18,81 +17,87 @@
 		<div class="column">
 			<header>
 				<h1 id="title">p5.js</h1>
-				<p id="subtitle">Een spiekbrief voor beginners!</p>
+				<p id="subtitle">Een spiekbrief <br>voor beginners!</p>
 			</header>
 
 			<section>
 				<h1>programma structuur</h1>
-				<pre>
-<span class="code-comments">//wordt eenmaal uitgevoerd bij start programma</span>
-function <strong>setup()</strong>{
+				<pre><code class="language-javaScript">//wordt eenmaal uitgevoerd bij start programma
+function setup(){
   createCanvas(800,600);
 }
 
-<span class="code-comments">//draait continu na setup()</span>
-function <strong>draw()</strong>{
-  <span class="code-comments">//programmacode</span>
+//draait continu na setup()
+function draw(){
+  //programmacode
 }
-				</pre>
+</code></pre>
 			</section>
 
 			<section>
 				<h1>systeemvariabelen</h1>
-				<pre>
-<strong>windowWidth / windowHeight</strong>
-<span class="descriptors">breedte / hoogte van het venster</span>
+				<pre><code class="language-javaScript">windowWidth / windowHeight
+//breedte / hoogte van het venster
 
-<strong>width / height</strong>
-<span class="descriptors">breedte / hoogte van het canvas</span>
+width / height
+//breedte / hoogte van het canvas
 
-<strong>mouseX / mouseY</strong>
-<span class="descriptors">huidige horizontale / verticale muispositie</span>
-				</pre>
+mouseX / mouseY
+//huidige horizontale / verticale muispositie
+</code></pre>
 			</section>
 
 			<section>
 				<h1>console uitvoer</h1>
-				<pre>
-<strong>print("tekst" + variabele);</strong>
-<span class="descriptors">geef informatie weer in de console</span>
-				</pre>
+				<pre><code class="language-javaScript">print("tekst" + variabele);
+//geef informatie weer in de console
+</code></pre>
 			</section>
 
 			<section>
 				<h1>kleur</h1>
-				<pre>
-<strong>fill(</strong>120<strong>);</strong> <span class="descriptors">grijs: 0-255</span>
-<strong>fill(</strong>100,125,255<strong>);</strong> <span class="descriptors">r, g, b: 0-255</span>
-<strong>fill(</strong>255, 0, 0, 50<strong>);</strong> <span class="descriptors">r, g, b, alpha</span>
-<strong>fill(</strong>'red'<strong>);</strong> <span class="descriptors">kleur aanduiding</span>
-<strong>fill(</strong>'#ccc'<strong>);</strong> <span class="descriptors">3-cijferige hex-code</span>
-<strong>fill(</strong>'#222222'<strong>);</strong> <span class="descriptors">6-cijferige hex-code</span>
-<strong>color(</strong>0, 0, 255<strong>);</strong> <span class="descriptors">p5 kleurobject</span>
-				</pre>
+				<pre><code class="language-javaScript">fill(120); //grijs: 0-255
+fill(100,125,255); //r, g, b: 0-255
+fill(255, 0, 0, 50); //r, g, b, alpha
+fill('red'); //kleur aanduiding
+fill('#ccc'); //3-cijferige hex-code
+fill('#222222'); //6-cijferige hex-code
+color(0, 0, 255); //p5 kleurobject
+</code></pre>
 			</section>
 		</div>
 
 		<div class="column">
 			<section>
+				<h1>wiskunde</h1>
+				<pre><code class="language-javaScript">+ - / *
+
+random(minimum,maximum);
+
+map(waarde, invoer-min, invoer-max, uitvoer-min, uitvoer-max);
+//converteer een waarde van invoer naar uitvoer
+</code></pre>
+			</section>
+
+			<section>
 				<h1>2d-vormen</h1>
-				<pre>
-<strong>line(</strong>x1, y1, x2, y2<strong>);</strong>
+				<pre><code class="language-javaScript">line(x1, y1, x2, y2);
 
-<strong>ellipse(</strong>x, y, breedte, hoogte<strong>);</strong>
+ellipse(x, y, breedte, hoogte);
 
-<strong>rect(</strong>x, y, breedte, hoogte<strong>);</strong>
+rect(x, y, breedte, hoogte);
 
-<strong>arc(</strong>x, y, breedte, hoogte, start, stop<strong>);</strong>
+arc(x, y, breedte, hoogte, start, stop);
 
-<strong>beginShape();</strong>
-  <strong>vertex(x1, y1);</strong>
-  <strong>vertex(x2, y2);</strong>
-  <strong>vertex(x3, y3);</strong>
-  <span class="code-comments">//voeg meer vertex() toe</span>
-<strong>endShape(</strong>CLOSE<strong>);</strong>
+beginShape();
+  vertex(x1, y1);
+  vertex(x2, y2);
+  vertex(x3, y3);
+  //voeg meer vertex() toe
+endShape(CLOSE);
 
-<strong>text(</strong>"mijn tekst", x, y, breedte, hoogte<strong>);</strong>
-				</pre>
+text("mijn tekst", x, y, breedte, hoogte);
+</code></pre>
 
 				<ul>
 					<li class="canvas-container">
@@ -122,56 +127,43 @@ function <strong>draw()</strong>{
 				</ul>
 			</section>
 
-			<section>
-				<h1>wiskunde</h1>
-				<pre>
-<strong>+ - / *</strong>
-
-<strong>random(</strong>minimum,maximum<strong>);</strong>
-
-<strong>map(</strong>waarde, invoer-min, invoer-max, uitvoer-min, uitvoer-max<strong>);</strong>
-<span class="descriptors">converteer een waarde van invoer naar uitvoer</span>
-				</pre>
-			</section>
 		</div>
 
 		<div class="column">
 			<section>
 				<h1>attributen</h1>
-				<pre>
-<strong>background(</strong>kleur<strong>);</strong>
-<span class="descriptors">stel de achtergrondkleur in</span>
+				<pre><code class="language-javaScript">background(kleur);
+//stel de achtergrondkleur in
 
-<strong>fill(</strong>kleur<strong>);</strong>
-<span class="descriptors">stel de vulkleur in</span>
+fill(kleur);
+//stel de vulkleur in
 
-<strong>noFill();</strong>
-<span class="descriptors">geen vulkleur</span>
+noFill();
+//geen vulkleur
 
-<strong>stroke(</strong>kleur<strong>);</strong>
-<span class="descriptors">stel de lijnkleur in</span>
+stroke(kleur);
+//stel de lijnkleur in
 
-<strong>strokeWeight(</strong>dikte<strong>);</strong>
-<span class="descriptors">stel de lijndikte in</span>
+strokeWeight(dikte);
+//stel de lijndikte in
 
-<strong>noStroke();</strong>
-<span class="descriptors">geen lijn</span>
+noStroke();
+//geen lijn
 
-<strong>ellipseMode(</strong>MODE<strong>);</strong>
-<strong>rectMode(</strong>MODE<strong>);</strong>
-<span class="descriptors">gebruik CENTER of CORNER</span>
+ellipseMode(MODE);
+rectMode(MODE);
+//gebruik CENTER of CORNER
 
-<strong>textSize(</strong>pixels<strong>);</strong>
-				</pre>
+textSize(pixels);
+</code></pre>
 			</section>
 
 			<section>
 				<h1>als/dan logica</h1>
-				<pre>
-
-<strong>if(</strong>conditie<strong>){</strong>
-  programmacode
-<strong>}</strong>
+				<div class="logic">
+				<pre><code class="language-javaScript">if(conditie){
+  //programmacode
+}
 
 == gelijk aan
 != niet gelijk
@@ -180,16 +172,18 @@ function <strong>draw()</strong>{
 >= groter dan of gelijk
 <= kleiner dan of gelijk
 
-				</pre>
+</code></pre>
 				<div id="ifelse-canvas"></div>
 			</section>
+			<footer>
+				Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC BY SA NC 4.0,<br/>
+				Translation by <a href="https://github.com/vincentsijben">Vincent Sijben</a>.
+			</footer>
+		</div>
 		</div>
 	</article>
 
-	<footer>
-		Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC BY SA NC 4.0,<br/>
-		Translation by <a href="https://github.com/vincentsijben">Vincent Sijben</a>.
-	</footer>
+
 
 	<script type="text/javascript">
 
@@ -207,6 +201,8 @@ function <strong>draw()</strong>{
 	};
 
 	</script>
+	<script src="prism.js"></script>
+	<script src="p5.min.js"></script>
 	<script src="diagram.js"></script>
 </body>
 </html>
