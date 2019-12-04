@@ -15,15 +15,9 @@ This is a [web based cheat sheet]() to help folks get started with [p5.js](http:
 
 There are also pre-compiled PDF's available within this repository for each translation for folks who would like to get off-line ASAP, or who would like an immediate copy of a cheat sheet.
 
----
+# Making a new translation!
 
 I'm looking for help translating this cheat sheet into as many languages as possible! If you can assist, please reach out via in the issues tab or via the [p5.js forum post](https://discourse.processing.org/t/a-p5-js-cheat-sheet-for-beginners/8236/7)!
-
-
-
-# How to make a Translation
-
-## there are 2 ways to handle the translation depending on your familiarity with HTML & Git. 
 
 ## 1
 If you're not comfortable with HTML & Git, then please respond to (or open) the associated language issue with the translations for each cheatsheet section and a contributor will implement and confirm them with you before pushing them live!
@@ -51,7 +45,6 @@ If you are comfortable with HTML & making git pull requests, then please:
 + verify that it will all fit on one page, if there is overflow, some minor custom CSS may need to be implemented.
 
 *^it's critical that it's in chrome, for best rendering and color accuracy*
-
 
 ---
 
