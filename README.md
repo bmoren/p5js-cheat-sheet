@@ -19,11 +19,10 @@ There are also pre-compiled PDF's available within this repository for each tran
 
 I'm looking for help translating this cheat sheet into as many languages as possible! If you can assist, please reach out via in the issues tab or via the [p5.js forum post](https://discourse.processing.org/t/a-p5-js-cheat-sheet-for-beginners/8236/7)!
 
-## 1
-If you're not comfortable with HTML & Git, then please respond to (or open) the associated language issue with the translations for each cheatsheet section and a contributor will implement and confirm them with you before pushing them live!
+### If you're not comfortable with HTML & Git:
+No worries! – Please respond to (or open) the associated language issue with the translations for each cheatsheet section and a contributor will implement and confirm them with you before pushing them live!
 
-## 2
-If you are comfortable with HTML & making git pull requests, then please:
+### If you are comfortable with HTML & making git pull requests:
 + clone the repository
 + navigate to the `docs` folder
 + copy `index.html` & rename to `langcode.html` (where langcode is the [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the language you are translating.
@@ -32,15 +31,15 @@ If you are comfortable with HTML & making git pull requests, then please:
 + add your name as the translator + a link to yourself in the `<footer>` section
 + make a pull request against the repository!
 
-## bonus tasks (if you have time or are able)
-### update the readme:
+### bonus tasks (if you have time or are able)
+#### update the readme:
 + add a link to the new translation in the readme.md
 + add your name as the translator + link to the readme.md
 
-### update the menu:
+#### update the menu:
 + in the `docs` folder, find the `menu.js` file and add a link to the translation page
 
-### add a pdf:
+#### add a pdf:
 + export a pdf and add to the root (print to PDF in *^chrome*), please name it `p5cheatsheet-PT.pdf`
 + verify that it will all fit on one page, if there is overflow, some minor custom CSS may need to be implemented.
 
