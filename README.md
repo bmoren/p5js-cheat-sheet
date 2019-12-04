@@ -21,8 +21,37 @@ I'm looking for help translating this cheat sheet into as many languages as poss
 
 
 
-## How to make a Translation
-coming soon!
+# How to make a Translation
+
+## there are 2 ways to handle the translation depending on your familiarity with HTML & Git. 
+
+## 1
+If you're not comfortable with HTML & Git, then please respond to (or open) the associated language issue with the translations for each cheatsheet section and a contributor will implement and confirm them with you before pushing them live!
+
+## 2
+If you are comfortable with HTML & making git pull requests, then please:
++ clone the repository
++ navigate to the `docs` folder
++ copy `index.html` & rename to `langcode.html` (where langcode is the [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the language you are translating.
++ make all translation changes inside of the  `<code class="language-javaScript"></code>` tags
++ make all translation changes to the `terms` JSON object at the bottom of the HTML page. 
++ add your name as the translator + a link to yourself in the `<footer>` section
++ make a pull request against the repository!
+
+## bonus tasks (if you have time or are able)
+### update the readme:
++ add a link to the new translation in the readme.md
++ add your name as the translator + link to the readme.md
+
+### update the menu:
++ in the `docs` folder, find the `menu.js` file and add a link to the translation page
+
+### add a pdf:
++ export a pdf and add to the root (print to PDF in *^chrome*), please name it `p5cheatsheet-PT.pdf`
++ verify that it will all fit on one page, if there is overflow, some minor custom CSS may need to be implemented.
+
+*^it's critical that it's in chrome, for best rendering and color accuracy*
+
 
 ---
 
