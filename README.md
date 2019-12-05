@@ -12,6 +12,8 @@ This is a [web based cheat sheet]() to help folks get started with [p5.js](http:
    + Translation by: [Philipp Lehmann](https://github.com/philipp-lehmann)
 + [Nederlands](https://bmoren.github.io/p5js-cheat-sheet/nl.html)
   + Translation by: [Vincent Sijben](https://github.com/vincentsijben)
++ [Korean](https://bmoren.github.io/p5js-cheat-sheet/ko.html)
+  + Translation by: [Yi donghoon](https://github.com/icq4ever)
 
 There are also pre-compiled PDF's available within this repository for each translation for folks who would like to get off-line ASAP, or who would like an immediate copy of a cheat sheet.
 
