@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>p5.js 한글 치트 시트</title>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" href="prism.css">
+
+</head>
+
+<body>
+
+	<!-- Include the menu, there's likely a more elegent way to do this -->
+	<script src="menu.js"></script>
+
+		<article id="cheat-sheet">
+			<div class="column">
+
+			<header>
+				<h1 id="title">p5.js</h1>
+				<p id="subtitle">초보자를 위한 치트 시트!</p>
+			</header>
+
+			<section>
+				<h1>프로그램 구조</h1>
+				<pre><code class="language-javaScript">// 프로그램이 시작될때 한번 실행됨
+function setup(){
+  createCanvas(800,600); // 픽셀단위의 가로, 세로 크기
+}
+
+// setup이 실행된 이후 반복되서 실행됨
+function draw(){
+  // 렌더링 반복
+}
+</code></pre>
+			</section>
+
+			<section>
+				<h1>시스템 변수들</h1>
+				<pre><code class="language-javaScript">windowWidth / windowHeight
+// 윈도우의 가로/세로
+
+width / height
+// 캔버스의 가로 / 세로
+
+mouseX / mouseY
+// 현재의 마우스의 x/y 좌표
+</code></pre>
+			</section>
+
+			<section>
+				<h1> 그래픽으로 출력되지 않는 피드백</h1>
+				<pre><code class="language-javaScript">print();
+// 브라우저의 콘솔에 출력
+
+// 주석처리를 위해 더블 슬래시를 사용 (프로그램이 무시함)
+</code></pre>
+			</section>
+
+			<section>
+				<h1>컬러</h1>
+				<pre><code class="language-javaScript">fill(120); // 흑백 : 0-255의 범주를 가짐
+fill(100,125,255); //r, g, b: 0-255의 범주를 가짐
+fill(255, 0, 0, 50); //r, g, b, 알파(투명도)
+fill('red'); // 컬러 문자열
+fill('#ccc'); // 3-digit의 HEX 코드
+fill('#222222'); // 6-digit의 HEX로 채움
+color(0, 0, 255); // p5.Color 오브젝트
+</code></pre>
+			</section>
+
+
+	</div>
+	<!-- End First Col -->
+
+	<div class="column">
+
+		<section>
+			<h1>수학</h1>
+			<pre><code class="language-javaScript">+ - / *  // 기본적인 수학 연산자
+
+random(low,high); // 범위가 있는 난수 생성하기
+
+map(value, in1, in2, out1, out2);
+// 어떤 값(value)이 가질수 있는 최소(in1), 최대(in2) 의 범위를 갖는데
+// 이를 최소(out1), 최대(out2) 범주로 변환했을때의 값을 계산
+</code></pre>
+		</section>
+
+<!-- CONSIDERING ADDING THIS HERE AND MOVING MATH TO THE BOTTOM OF COL 1, THOGUHTS? -->
+		<!-- <section>
+			<h1>variable definition</h1>
+			<pre><code class="language-javaScript">//let & keyword defines a variable
+// use single = to store data in the variable
+let variableName = 100;
+let myWords = "a string of text!";
+let randStorage = random(0,255); // store returned data
+</code></pre>
+		</section> -->
+
+		<section>
+			<h1>2차원 기초도형</h1>
+			<pre><code class="language-javaScript">line(x1, y1, x2, y2);
+
+ellipse(x, y, width, height);
+
+rect(x, y, width, height);
+
+arc(x, y, width, height, start, stop);
+
+beginShape();
+  vertex(x1, y1);
+  vertex(x2, y2);
+  vertex(x3, y3);
+  // 버택스를 추가한다.
+endShape(CLOSE);
+
+text("string", x, y, boxwidth, boxheight);
+</code></pre>
+
+			<ul>
+				<li class="canvas-container">
+					<h2>그리드 시스템</h2>
+					<div id="grid-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>line()</h2>
+					<div id="line-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>ellipse()</h2>
+					<div id="ellipse-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>rect()</h2>
+					<div id="rect-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>arc()</h2>
+					<div id="arc-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>vertex()</h2>
+					<div id="vertex-canvas"></div>
+				</li>
+			</ul>
+		</section>
+
+
+
+	</div>
+	<!-- End Second Col -->
+	<div class="column">
+
+		<section>
+			<h1>속성들</h1>
+			<pre><code class="language-javaScript">background(color);
+// 배경색을 지정
+
+fill(color);
+// 채울 색을 지정
+
+noFill();
+// 채우기를 비활성화 함
+
+stroke(color);
+// 선의 색을 지정
+
+strokeWeight(weight);
+// 선의 두꼐를 픽셀단위로 지정
+
+noStroke();
+// 선을 비활성화
+
+ellipseMode(MODE);
+rectMode(MODE);
+// CENTER,CORNER
+
+textSize(pixels);
+</code></pre>
+		</section>
+
+		<section>
+			<h1>if/then logic</h1>
+			<div class="logic">
+				<pre><code class="language-javaScript">if(test){
+  // 조건문의 구조
+}
+
+===  // 같은가? (double is important)
+!=  // 다른가?
+>   // 큰가?
+<   // 작은가?
+>=  // 크거나 같은가?
+<=  // 작거나 같은가?
+
+</code></pre>
+<div id="ifelse-canvas"></div>
+
+		</div>
+
+		</section>
+
+		<footer>
+			Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC-BY-SA-NC-4.0
+			<br>
+			Translation by <a href="http://github.com/icq4ever">Yi donghoon</a>
+		</footer>
+
+	</div>
+
+	</article>
+
+
+	<script type="text/javascript">
+		// Terms to translate for diagrams
+		var terms = {
+			"width": "width",
+			"height": "height",
+			"stop": "stop",
+			"start": "start",
+			"true": "true",
+			"false": "false",
+			"continue_program": "continue program",
+			"test": "test",
+			"statements": "statements"
+		};
+	</script>
+
+	<script src="prism.js"></script>
+	<script src="p5.min.js"></script>
+	<script src="diagram.js"></script>
+</body>
+
+</html>
