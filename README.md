@@ -1,6 +1,6 @@
 # [a p5js cheat sheet for beginners!](https://bmoren.github.io/p5js-cheat-sheet/)
 
-This is a [web based cheat sheet]() to help folks get started with [p5.js](http://p5js.org)! The cheat sheet is fully formatted for printing on a single sheet of paper for easy reference, classroom, and workshop usage. There are several translations available:
+This is a [web based cheat sheet](https://bmoren.github.io/p5js-cheat-sheet/) to help folks get started with [p5.js](http://p5js.org)! The cheat sheet is fully formatted for printing on a single sheet of paper for easy reference, classroom, and workshop usage. There are several translations available:
 
 + [English](https://bmoren.github.io/p5js-cheat-sheet/)
   + Translation by: [Ben Moren](https://github.com/bmoren)
