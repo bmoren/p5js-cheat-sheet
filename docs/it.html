@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>p5.js Cheat Sheet</title>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" href="prism.css">
+
+</head>
+
+<body>
+
+	<!-- Include the menu, there's likely a more elegent way to do this -->
+	<script src="menu.js"></script>
+
+		<article id="cheat-sheet">
+			<div class="column">
+
+			<header>
+				<h1 id="title">p5.js</h1>
+				<p id="subtitle">promemoria <br> per principianti</p>
+			</header>
+
+			<section>
+				<h1>struttura del programma</h1>
+				<pre><code class="language-javaScript">//eseguito una volta all'avvio del programma
+function setup(){
+  createCanvas(800,600); //larghezza,altezza
+}
+
+//eseguito continuamente dopo il setup
+function draw(){
+  //istruzioni di disegno
+}
+</code></pre>
+			</section>
+
+			<section>
+				<h1>variabili di sistema</h1>
+				<pre><code class="language-javaScript">windowWidth / windowHeight
+//larghezza / altezza della finestra
+
+width / height
+//larghezza / altezza dell'area di disegno
+
+mouseX / mouseY
+//posizione orizzontale / verticale del mouse
+</code></pre>
+			</section>
+
+			<section>
+				<h1>feedback non grafico</h1>
+				<pre><code class="language-javaScript">print();
+//visualizza informazioni nella console
+
+//doppia barra per commentare il codice
+</code></pre>
+			</section>
+
+			<section>
+				<h1>colore</h1>
+				<pre><code class="language-javaScript">fill(120); //grigio: 0-255
+fill(100,125,255); //rosso, verde, blu: 0-255
+fill(255, 0, 0, 50); //rosso, verde, blu, alfa
+fill('red'); //nome colore (in inglese)
+fill('#ccc'); //codice esadecimale a 3 cifre
+fill('#222222'); //codice esadecimale a 6 cifre
+color(0, 0, 255); //oggetto p5.Color
+</code></pre>
+			</section>
+
+
+	</div>
+	<!-- End First Col -->
+
+	<div class="column">
+
+		<section>
+			<h1>matematica</h1>
+			<pre><code class="language-javaScript">+ - / *  //operatori matematici di base
+
+random(minimo, massimo); //numero casuale
+
+map(valore, attuale1, attuale2, nuovo1, nuovo2);
+//mappa un valore dall'intervallo attuale a uno nuovo
+</code></pre>
+		</section>
+
+<!-- CONSIDERING ADDING THIS HERE AND MOVING MATH TO THE BOTTOM OF COL 1, THOGUHTS? -->
+		<!-- <section>
+			<h1>variable definition</h1>
+			<pre><code class="language-javaScript">//let & keyword defines a variable
+// use single = to store data in the variable
+let variableName = 100;
+let myWords = "a string of text!";
+let randStorage = random(0,255); // store returned data
+</code></pre>
+		</section> -->
+
+		<section>
+			<h1>primitive 2d</h1>
+			<pre><code class="language-javaScript">line(x1, y1, x2, y2); //linea
+
+ellipse(x, y, larghezza, altezza); //ellisse
+
+rect(x, y, larghezza, altezza); //rettangolo
+
+arc(x, y, larghezza, altezza, inizio, fine); //arco
+
+beginShape(); //poligono
+  vertex(x1, y1);
+  vertex(x2, y2);
+  vertex(x3, y3);
+  //aggiungi eventuali altri vertici
+endShape(CLOSE);
+
+text("testo", x, y, larghezzaParagrafo, altezzaParagrafo);
+</code></pre>
+
+			<ul>
+				<li class="canvas-container">
+					<h2>coordinate</h2>
+					<div id="grid-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>line()</h2>
+					<div id="line-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>ellipse()</h2>
+					<div id="ellipse-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>rect()</h2>
+					<div id="rect-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>arc()</h2>
+					<div id="arc-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>vertex()</h2>
+					<div id="vertex-canvas"></div>
+				</li>
+			</ul>
+		</section>
+
+
+
+	</div>
+	<!-- End Second Col -->
+	<div class="column">
+
+		<section>
+			<h1>attributi grafici</h1>
+			<pre><code class="language-javaScript">background(colore);
+//colora l'intera area di disegno
+
+fill(colore);
+//imposta il colore di riempimento
+
+noFill();
+//disattiva il riempimento
+
+stroke(colore);
+//imposta il colore dei contorni
+
+strokeWeight(spessore);
+//imposta lo spessore dei contorni in pixel
+
+noStroke();
+//disattiva il disegno dei contorni
+
+ellipseMode(ancoraggio);
+rectMode(ancoraggio);
+//ancoraggi: CENTER, CORNER
+
+textSize(altezzaCarattere);
+</code></pre>
+		</section>
+
+		<section>
+			<h1>logica se/allora</h1>
+			<div class="logic">
+				<pre><code class="language-javaScript">if(condizione){
+  //istruzioni
+}
+
+===  //uguale a
+!=  //diverso da
+>   //maggiore di
+<   //minore di
+>=  //maggiore o uguale
+<=  //minore o uguale
+
+</code></pre>
+<div id="ifelse-canvas"></div>
+
+		</div>
+
+		</section>
+
+		<footer>
+			Redatto da Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC-BY-SA-NC-4.0
+			<br>
+			Tradotto da <a href="https:/codesthesia.net">Antonio Belluscio</a>
+		</footer>
+
+	</div>
+
+	</article>
+
+
+	<script type="text/javascript">
+		// Terms to translate for diagrams
+		var terms = {
+			"width": "larghezza",
+			"height": "altezza",
+			"stop": "fine",
+			"start": "inizio ",  // the final space avoids overlapping with the arc
+			"true": "vero",
+			"false": "falso",
+			"continue_program": "continua il programma",
+			"test": "condizione",
+			"statements": "istruzioni"
+		};
+	</script>
+
+	<script src="prism.js"></script>
+	<script src="p5.min.js"></script>
+	<script src="diagram.js"></script>
+</body>
+
+</html>
