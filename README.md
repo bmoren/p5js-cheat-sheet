@@ -14,6 +14,8 @@ This is a [web based cheat sheet](https://bmoren.github.io/p5js-cheat-sheet/) to
   + Translation by: [Vincent Sijben](https://github.com/vincentsijben)
 + [Korean](https://bmoren.github.io/p5js-cheat-sheet/ko.html)
   + Translation by: [Yi donghoon](https://github.com/icq4ever)
++ [Italian](https://bmoren.github.io/p5js-cheat-sheet/it.html)
+  + Translation by: [Antonio Belluscio](https://codesthesia.net)
 
 There are also pre-compiled PDF's available within this repository for each translation for folks who would like to get off-line ASAP, or who would like an immediate copy of a cheat sheet.
 
@@ -29,7 +31,7 @@ No worries! – Please respond to (or open) the associated language issue with t
 + navigate to the `docs` folder
 + copy `index.html` & rename to `langcode.html` (where langcode is the [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the language you are translating.
 + make all translation changes inside of the  `<code class="language-javaScript"></code>` tags
-+ make all translation changes to the `terms` JSON object at the bottom of the HTML page. 
++ make all translation changes to the `terms` JSON object at the bottom of the HTML page.
 + add your name as the translator + a link to yourself in the `<footer>` section
 + make a pull request against the repository!
 
