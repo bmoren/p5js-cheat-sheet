@@ -12,6 +12,7 @@ document.write(`
     <li><a href="nl.html">Nederlands</a></li>
     <li><a href="ja.html">日本語</a></li>
     <li><a href="ko.html">한국어</a></li>
+    <li><a href="id.html">Indonesia</a></li>
     <li> | </li>
     <li><a href="https://p5js.org/reference/">p5js Reference</a></li>
   </ul>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>p5.js Cheat Sheet</title>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" href="prism.css">
+
+</head>
+
+<body>
+
+	<!-- Include the menu, there's likely a more elegent way to do this -->
+	<script src="menu.js"></script>
+
+		<article id="cheat-sheet">
+			<div class="column">
+
+			<header>
+				<h1 id="title">p5.js</h1>
+				<p id="subtitle">contekan untuk pemula!</p>
+			</header>
+
+			<section>
+				<h1>struktur program</h1>
+				<pre><code class="language-javaScript">//berjalan sekali ketika program dimulai
+function setup(){
+  createCanvas(800,600); //lebar,tinggi dalam satuan piksel
+}
+
+//berjalan terus menerus setelah fungsi setup
+function draw(){
+  //me-render kode program terus menerus
+}
+</code></pre>
+			</section>
+
+			<section>
+				<h1>variabel sistem</h1>
+				<pre><code class="language-javaScript">windowWidth / windowHeight
+//lebar / tinggi jendela browser
+
+width / height
+//lebar / tinggi kanvas
+
+mouseX / mouseY
+//posisi mouse horisontal/vertikal saat ini
+</code></pre>
+			</section>
+
+			<section>
+				<h1>umpan balik non-visual</h1>
+				<pre><code class="language-javaScript">print();
+//menampilkan data ke konsol
+
+//double slash untuk memberikan komentar (program akan melewatinya)
+</code></pre>
+			</section>
+
+			<section>
+				<h1>warna</h1>
+				<pre><code class="language-javaScript">fill(120); //abu: 0-255
+fill(100,125,255); //r, g, b: 0-255
+fill(255, 0, 0, 50); //r, g, b, alfa/transparansi
+fill('red'); //warna dengan bentuk string
+fill('#ccc'); //warna dengan 3-digit heksadesimal
+fill('#222222'); //warna dengan 6-digit heksadesimal
+color(0, 0, 255); //objek p5.Color
+</code></pre>
+			</section>
+
+
+	</div>
+	<!-- End First Col -->
+
+	<div class="column">
+
+		<section>
+			<h1>perhitungan numerik</h1>
+			<pre><code class="language-javaScript">+ - / *  //dasar operasi matematika
+
+random(low,high); //mengacak angka yang berkisar
+
+map(value, in1, in2, out1, out2);
+//memetakan nilai dari rentang input ke rentang output
+</code></pre>
+		</section>
+
+<!-- CONSIDERING ADDING THIS HERE AND MOVING MATH TO THE BOTTOM OF COL 1, THOGUHTS? -->
+		<!-- <section>
+			<h1>variable definition</h1>
+			<pre><code class="language-javaScript">//let & keyword defines a variable
+// use single = to store data in the variable
+let variableName = 100;
+let myWords = "a string of text!";
+let randStorage = random(0,255); // store returned data
+</code></pre>
+		</section> -->
+
+		<section>
+			<h1>bentuk 2d</h1>
+			<pre><code class="language-javaScript">line(x1, y1, x2, y2);
+
+ellipse(x, y, width, height);
+
+rect(x, y, width, height);
+
+arc(x, y, width, height, start, stop);
+
+beginShape();
+  vertex(x1, y1);
+  vertex(x2, y2);
+  vertex(x3, y3);
+  //silakan tambahkan lebih banyak simpul/titik
+endShape(CLOSE);
+
+text("string", x, y, boxwidth, boxheight);
+</code></pre>
+
+			<ul>
+				<li class="canvas-container">
+					<h2>sistem grid</h2>
+					<div id="grid-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>line()</h2>
+					<div id="line-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>ellipse()</h2>
+					<div id="ellipse-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>rect()</h2>
+					<div id="rect-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>arc()</h2>
+					<div id="arc-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>vertex()</h2>
+					<div id="vertex-canvas"></div>
+				</li>
+			</ul>
+		</section>
+
+
+
+	</div>
+	<!-- End Second Col -->
+	<div class="column">
+
+		<section>
+			<h1>atribut</h1>
+			<pre><code class="language-javaScript">background(color);
+//atur warna latar
+
+fill(color);
+//atur warna isian (bentuk 2d)
+
+noFill();
+//menonaktifkan isian
+
+stroke(color);
+//atur warna stroke (garis luar bentuk 2d)
+
+strokeWeight(weight);
+//atur lebar garis dalam piksel
+
+noStroke();
+//menonaktifkan stroke
+
+ellipseMode(MODE);
+rectMode(MODE);
+//CENTER,CORNER
+
+textSize(pixels);
+</code></pre>
+		</section>
+
+		<section>
+			<h1>logika bersyarat if/then</h1>
+			<div class="logic">
+				<pre><code class="language-javaScript">if(test){
+  //pernyataan / statements
+}
+
+===  //sama dengan
+!=  //tidak sama dengan
+>   //lebih dari
+<   //kurang dari
+>=  //lebih dari atau sama dengan
+<=  //kurang dari atau sama dengan
+
+</code></pre>
+<div id="ifelse-canvas"></div>
+
+		</div>
+
+		</section>
+
+		<footer>
+			Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC-BY-SA-NC-4.0
+			<br>
+			Translation by <a href="https://github.com/hilmizul">Zul Hilmi</a>
+		</footer>
+
+	</div>
+
+	</article>
+
+
+	<script type="text/javascript">
+		// Terms to translate for diagrams
+		var terms = {
+			"width": "width",
+			"height": "height",
+			"stop": "stop",
+			"start": "start",
+			"true": "true",
+			"false": "false",
+			"continue_program": "continue program",
+			"test": "test",
+			"statements": "pernyataan"
+		};
+	</script>
+
+	<script src="prism.js"></script>
+	<script src="p5.min.js"></script>
+	<script src="diagram.js"></script>
+</body>
+
+</html>
