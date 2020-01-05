@@ -50,10 +50,11 @@ No worries! – Please respond to (or open) the associated language issue with t
 + in the `docs` folder, find the `menu.js` file and add a link to the translation page
 
 #### add a pdf:
-+ export a pdf and add to the root (print to PDF in *^chrome*), please name it `p5cheatsheet-PT.pdf`
++ export a pdf and add to the root (print to PDF in *^chrome*), please name it `p5cheatsheet-▵LC.pdf`
 + verify that it will all fit on one page, if there is overflow, some minor custom CSS may need to be implemented.
 
 *^it's critical that it's in chrome, for best rendering and color accuracy*
+*▵ the LC here refers to Language Code, please use the appropriate [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the language you are translating*
 
 ---
 
