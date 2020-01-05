@@ -20,6 +20,8 @@ This is a [web based cheat sheet](https://bmoren.github.io/p5js-cheat-sheet/) to
   + Translation by: [Andy Valdés Valdés](https://andyvaldesvaldes.com/)
 + [Indonesia](https://bmoren.github.io/p5js-cheat-sheet/id.html)
   + Translation by: [Zul Hilmi](https://github.com/hilmizul)
++ [Portuguese](https://bmoren.github.io/p5js-cheat-sheet/pt.html)
+  + Translation by: [Felipe Turcheti](https://github.com/fturcheti)
 
 There are also pre-compiled PDF's available within this repository for each translation for folks who would like to get off-line ASAP, or who would like an immediate copy of a cheat sheet.
 
