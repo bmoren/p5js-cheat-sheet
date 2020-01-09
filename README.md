@@ -19,10 +19,10 @@ This is a [web based cheat sheet](https://bmoren.github.io/p5js-cheat-sheet/) to
 + [Español](https://bmoren.github.io/p5js-cheat-sheet/es.html)
   + Translation by: [Andy Valdés Valdés](https://andyvaldesvaldes.com/)
 + [Indonesia](https://bmoren.github.io/p5js-cheat-sheet/id.html)
-  + Translatiby: [Zul Hilmi](https://github.com/hilmizul)
+  + Translation by: [Zul Hilmi](https://github.com/hilmizul)
 + [Portuguese](https://bmoren.github.io/p5js-cheat-sheet/pt.html)
   + Translation by: [Felipe Turcheti](https://github.com/fturcheti)
-+ [Chinese]](https://bmoren.github.io/p5js-cheat-sheet/zh.html)
++ [Chinese](https://bmoren.github.io/p5js-cheat-sheet/zh.html)
   + Translation by: [Drafffffff](https://github.com/draffffff)
 
 There are also pre-compiled PDF's available within this repository for each translation for folks who would like to get off-line ASAP, or who would like an immediate copy of a cheat sheet.
