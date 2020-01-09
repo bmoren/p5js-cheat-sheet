@@ -10,6 +10,7 @@ document.write(`
     <li><a href="it.html">Italiano</a></li>
     <li><a href="de.html">Deutsche</a></li>
     <li><a href="nl.html">Nederlands</a></li>
+    <li><a href="zh.html">中文</a></li>
     <li><a href="ja.html">日本語</a></li>
     <li><a href="ko.html">한국어</a></li>
     <li><a href="id.html">Indonesia</a></li>
