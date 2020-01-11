@@ -199,9 +199,9 @@ div.column section ul{
 		font-size: 1.25vw;
 	}
 
-/* special for printing the JA since the characters take more vertical space */
-	#ja{
-		font-size: 1.1vw;
+/* special for printing the JA, ZH since the characters take more vertical space */
+	#ja , #zh{
+		font-size: 1.0vw;
 	}
 
  	nav#page-header{
