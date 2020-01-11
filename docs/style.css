@@ -179,7 +179,7 @@ div.column section ul{
 	 	grid-template-columns: 1fr;
 	 }
 
-	 header#page-header #language-selection{
+	 nav#page-header #language-selection{
 	 	position:relative;
 	 	left:0;
 	 	width:100%;
@@ -204,7 +204,7 @@ div.column section ul{
 		font-size: 1.1vw;
 	}
 
- 	header#page-header{
+ 	nav#page-header{
 		display:none;
 	}
 
