@@ -65,7 +65,7 @@ footer{
 }
 
 
-header#page-header{
+nav#page-header{
 	position: fixed;
 	width: 100%;
 	left: 0;
@@ -73,15 +73,15 @@ header#page-header{
 	z-index:9999;
 }
 
-header#page-header #language-selection{
+nav#page-header #language-selection{
 	position:absolute;
-	/* right:0; */
+	right:0;
 	display: flex;
 	list-style: none;
 	padding: 1vh;
 	background-color:#fafafa;
 	justify-content: space-around;
-	width:100vw;
+	width:33vw;
 
 }
 

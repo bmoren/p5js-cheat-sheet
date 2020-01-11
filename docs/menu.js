@@ -1,24 +1,26 @@
+// The menu's option arrtibute should be the ISO code associated with the language & HTML page
 document.write(`
-
-<header id="page-header">
+<nav id="page-header">
   <ul id="language-selection">
     <li id="print"> 🖨 </li>
     <li> | </li>
-    <li><a href="index.html">English</a></li>
-    <li><a href="es.html">Español</a></li>
-    <li><a href="fr.html">Français</a></li>
-    <li><a href="it.html">Italiano</a></li>
-    <li><a href="de.html">Deutsche</a></li>
-    <li><a href="nl.html">Nederlands</a></li>
-    <li><a href="zh.html">中文</a></li>
-    <li><a href="ja.html">日本語</a></li>
-    <li><a href="ko.html">한국어</a></li>
-    <li><a href="id.html">Indonesia</a></li>
-    <li><a href="pt.html">Português</a></li>
+    <select id="dropdownmenu" onchange="window.location = this.value + '.html' ">
+    <option value="index"> English </option>
+    <option value="es"> Español </option>
+    <option value="fr"> Français </option>
+    <option value="it"> Italiano </option>
+    <option value="de"> Deutsche </option>
+    <option value="nl"> Nederlands </option>
+    <option value="zh"> 中文 </option>
+    <option value="ja"> 日本語 </option>
+    <option value="ko"> 한국어 </option>
+    <option value="id"> Indonesia </option>
+    <option value="pt"> Português </option>
+    </select>
     <li> | </li>
     <li><a href="https://p5js.org/reference/">p5js Reference</a></li>
   </ul>
-</header>
+</nav>
 
 <style>
   #print:hover{cursor:pointer;}
@@ -26,9 +28,15 @@ document.write(`
 
 `)
 
+//select/toggle the correct language from the dropdown after making a selection (there might be a better way to do this?)
+var path = window.location.pathname.split("/").pop();
+var lang = path.split(".")[0]
+// console.log( lang );
+document.querySelector(`option[value=${lang}]`).selected = true
 
+
+//warning for printing to use chrome
 document.getElementById('print').addEventListener('click', function(){
-  // print();
 
   let browser = navigator.userAgent.split(')').reverse()[0].match(/(?!Gecko|Version|[A-Za-z]+?Web[Kk]it)[A-Z][a-z]+/g)[0]
 
