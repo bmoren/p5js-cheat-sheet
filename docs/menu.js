@@ -9,7 +9,7 @@ document.write(`
     <option value="es"> Español </option>
     <option value="fr"> Français </option>
     <option value="it"> Italiano </option>
-    <option value="de"> Deutsche </option>
+    <option value="de"> Deutsch </option>
     <option value="nl"> Nederlands </option>
     <option value="zh"> 中文 </option>
     <option value="ja"> 日本語 </option>
