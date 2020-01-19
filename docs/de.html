@@ -1,96 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>p5.js Cheat Sheet</title>
-	<meta http-equiv="pragma" content="no-cache" />
-	<meta http-equiv="cache-control" content="no-cache" />
+  <head>
+    <title>p5.js Cheat Sheet</title>
+    <meta content="no-cache" http-equiv="pragma"/>
+    <meta content="no-cache" http-equiv="cache-control"/>
 
-	<link rel="stylesheet" type="text/css" href="style.css" media="all">
-	<link rel="stylesheet" type="text/css" href="prism.css" media="all">
+    <link href="style.css" media="all" rel="stylesheet" type="text/css">
+    <link href="prism.css" media="all" rel="stylesheet" type="text/css">
 
 
-</head>
-<body>
-	<!-- Include the menu, there's likely a more elegent way to do this -->
-	<script src="menu.js"></script>
+  </head>
+  <body>
+    <!-- Include the menu, there's likely a more elegent way to do this -->
+    <script src="menu.js"></script>
 
-	<article id="cheat-sheet">
-		<div class="column">
-			<header>
-				<h1 id="title">p5.js</h1>
-				<p id="subtitle"> Spickzettel <br> für Anfänger!</p>
-			</header>
+    <article id="cheat-sheet">
+      <div class="column">
+        <header>
+          <h1 id="title">p5.js</h1>
+          <p id="subtitle">
+            Spickzettel
+            <br>
+            für Anfänger!</p>
+        </header>
 
-			<section>
-				<h1>programmstruktur</h1>
-				<pre><code class="language-javaScript">//wird einmal bei programmstart ausgeführt
+        <section>
+          <h1>Programmstruktur</h1>
+          <pre><code class="language-javaScript">//wird einmal bei Programmstart ausgeführt
 function setup(){
   createCanvas(800,600);
 }
 
 //läuft fortwährend
 function draw(){
-  //ausgabeschleife
+  //Ausgabeschleife
 }
 </code></pre>
-			</section>
+        </section>
 
-			<section>
-				<h1>systemvariablen</h1>
-				<pre><code class="language-javaScript">windowWidth / windowHeight
-//breite / höhe des fensters
+        <section>
+          <h1>Systemvariablen</h1>
+          <pre><code class="language-javaScript">windowWidth / windowHeight
+//Breite / Höhe des fensters
 
 width / height
-//breite / höhe des canvas
+//Breite / Höhe des canvas
 
 mouseX / mouseY
-//aktuelle horizontale / vertikale mausposition
+//aktuelle horizontale / vertikale Mausposition
 </code></pre>
-			</section>
+        </section>
 
-			<section>
-				<h1>konsolenausgabe</h1>
-				<pre><code class="language-javaScript">
+        <section>
+          <h1>Konsolenausgabe</h1>
+          <pre><code class="language-javaScript">
 print();
-//daten in der konsole ausgeben
+//Daten in der Konsole ausgeben
 </code></pre>
-			</section>
+        </section>
 
-			<section>
-				<h1>farbe</h1>
-				<pre><code class="language-javaScript">fill(120); //grau: 0-255
+        <section>
+          <h1>Farbe</h1>
+          <pre><code class="language-javaScript">fill(120); //grau: 0-255
 fill(100,125,255); //r, g, b: 0-255
 fill(255, 0, 0, 50); //r, g, b, alpha
-fill('red'); //farbbezeichnung
-fill('#ccc'); //3-stelliger hexcode
-fill('#222222'); //6-stelliger hex
-color(0, 0, 255); //p5 farbobjekt
+fill('red'); //Farbbezeichnung
+fill('#ccc'); //3-stelliger Farbcode in Hexadecimal
+fill('#222222'); //6-stelliger Farbcode in Hexadecimal
+color(0, 0, 255); //p5 Farbobjekt
 </code></pre>
-			</section>
-		</div>
+        </section>
+      </div>
 
-		<div class="column">
+      <div class="column">
 
-			<section>
-				<h1>math</h1>
-				<pre><code class="language-javaScript">+ - / *
+        <section>
+          <h1>Mathe</h1>
+          <pre><code class="language-javaScript">+ - / *
 
 random(minimum,maximum);
 
 map(wert, in1, in2, out1, out2);
-//transformiert einen wert von der eingabeskala in die ausgabeskala
+//transformiert einen Wert von der Eingabeskala in die Ausgabeskala
 </code></pre>
-			</section>
+        </section>
 
-			<section>
-				<h1>2D-formen</h1>
-				<pre><code class="language-javaScript">line(x1, y1, x2, y2);
+        <section>
+          <h1>2D-Formen</h1>
+          <pre><code class="language-javaScript">line(x1, y1, x2, y2);
 
-ellipse(x, y, breite, höhe);
+ellipse(x, y, breite, höhe);
 
-rect(x, y, breite, höhe); //rechteck
+rect(x, y, breite, höhe); //Rechteck
 
-//bogen
+//Bogen
 arc(x, y, breite, höhe, start, stop);
 
 beginShape();
@@ -99,73 +102,73 @@ beginShape();
   vertex(x3, y3);
 endShape(CLOSE);
 
-text("begriff", x, y, breite, höhe);
+text("Begriff", x, y, breite, höhe);
 </code></pre>
 
-				<ul>
-					<li class="canvas-container">
-						<h2>rastersystem</h2>
-						<div id="grid-canvas"></div>
-					</li>
-					<li class="canvas-container">
-						<h2>line()</h2>
-						<div id="line-canvas"></div>
-					</li>
-					<li class="canvas-container">
-						<h2>ellipse()</h2>
-						<div id="ellipse-canvas"></div>
-					</li>
-					<li class="canvas-container">
-						<h2>rect()</h2>
-						<div id="rect-canvas"></div>
-					</li>
-					<li class="canvas-container">
-						<h2>arc()</h2>
-						<div id="arc-canvas"></div>
-					</li>
-					<li class="canvas-container">
-						<h2>vertex()</h2>
-						<div id="vertex-canvas"></div>
-					</li>
-				</ul>
-			</section>
+          <ul>
+            <li class="canvas-container">
+              <h2>Rastersystem</h2>
+              <div id="grid-canvas"></div>
+            </li>
+            <li class="canvas-container">
+              <h2>line()</h2>
+              <div id="line-canvas"></div>
+            </li>
+            <li class="canvas-container">
+              <h2>ellipse()</h2>
+              <div id="ellipse-canvas"></div>
+            </li>
+            <li class="canvas-container">
+              <h2>rect()</h2>
+              <div id="rect-canvas"></div>
+            </li>
+            <li class="canvas-container">
+              <h2>arc()</h2>
+              <div id="arc-canvas"></div>
+            </li>
+            <li class="canvas-container">
+              <h2>vertex()</h2>
+              <div id="vertex-canvas"></div>
+            </li>
+          </ul>
+        </section>
 
-		</div>
+      </div>
 
-		<div class="column">
-			<section>
-				<h1>attributes</h1>
-				<pre><code class="language-javaScript">background(farbe);
-//hintergrundfarbe setzen
+      <div class="column">
+        <section>
+          <h1>Attribute</h1>
+          <pre><code class="language-javaScript">background(Farbe);
+//Hintergrundfarbe setzen
 
-fill(farbe);
-//füllfarbe setzen
+fill(Farbe);
+//Füllfarbe setzen
 
 noFill();
-//keine füllfarbe
+//keine Füllfarbe
 
 stroke(farbe);
-//strichfarbe setzen
+//Strichfarbe setzen
 
 strokeWeight(stärke);
-//strichstärke einstellen
+//Strichstärke einstellen
 
 noStroke();
-//kein strich zeichnen
+//kein Strich zeichnen
 
-ellipseMode(modus);
-rectMode(modus);
+ellipseMode(Modus);
+rectMode(Modus);
 //CENTER oder CORNER
 
 textSize(pixels);
 </code></pre>
-			</section>
+        </section>
 
-			<section>
-				<h1>if/then Logik</h1>
-				<div class="logic">
-				<pre><code class="language-javaScript">if(bedingung){
-  //programmcode
+        <section>
+          <h1>wenn/dann Logik</h1>
+          <div class="logic">
+            <pre><code class="language-javaScript">if(Bedingung){
+  //Programmcode
 }
 
 === //gleich wie
@@ -175,38 +178,41 @@ textSize(pixels);
 >= //grösser oder gleich wie
 <= //kleiner oder gleich wie
 </code></pre>
-				<div id="ifelse-canvas"></div>
-			</section>
+            <div id="ifelse-canvas"></div>
+          </section>
 
-			<footer>
-				Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC BY SA NC 4.0<br/>
-				Translation by <a href="https://github.com/philipp-lehmann">Philipp Lehmann</a>
-			</footer>
-		</div>
+          <footer>
+            Erstellt von Ben Moren
+            <a href="http://benmoren.com">http://benmoren.com</a>
+            CC BY SA NC 4.0<br/>
+            Übersetzt von
+            <a href="https://github.com/philipp-lehmann">Philipp Lehmann</a>,
+            <a href="https://github.com/gruselhaus">Nico Finkernagel</a>
+          </footer>
+        </div>
 
 
-		</div>
-	</article>
+      </div>
+    </article>
 
 
-	<script type="text/javascript">
+    <script type="text/javascript">
 
-	// Terms to translate for diagrams
-	var terms = {
-		"width": "breite",
-		"height": "höhe",
-		"stop": "stop",
-		"start": "start",
-		"true": "wahr",
-		"false": "falsch",
-		"continue_program": "programm wird\nweitergeführt",
-		"test": "bedingung",
-		"statements": "programmcode"
-	};
-
-	</script>
-	<script src="prism.js"></script>
-	<script src="p5.min.js"></script>
-	<script src="diagram.js"></script>
-</body>
+      // Terms to translate for diagrams
+      var terms = {
+        "width": "Breite",
+        "height": "Höhe",
+        "stop": "Stop",
+        "start": "Start",
+        "true": "wahr",
+        "false": "falsch",
+        "continue_program": "Programm wird\nweitergeführt",
+        "test": "Bedingung",
+        "statements": "Programmcode"
+      };
+    </script>
+    <script src="prism.js"></script>
+    <script src="p5.min.js"></script>
+    <script src="diagram.js"></script>
+  </body>
 </html>
