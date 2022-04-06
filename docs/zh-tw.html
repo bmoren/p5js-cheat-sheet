@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>p5.js新手入门神器</title>
+	<title>p5.js新手小抄</title>
 	<meta http-equiv="pragma" content="no-cache" />
 	<meta http-equiv="cache-control" content="no-cache" />
 	<meta charset="utf-8">
@@ -23,54 +23,54 @@
 
 			<header>
 				<h1 id="title">p5.js</h1>
-				<p id="subtitle">新手入门神器!</p>
+				<p id="subtitle">給新手的小抄!</p>
 			</header>
 
 			<section>
-				<h1>程序基本结构</h1>
-				<pre><code class="language-javaScript">//初始化，只在程序开始运行的时候执行一次
+				<h1>程式基本架構</h1>
+				<pre><code class="language-javaScript">//初始化，只在程式開始運行的時候執行一次
 function setup(){
-  createCanvas(800,600); //画布长度和宽度，单位是像素
+  createCanvas(800,600); //建立寬高為 800 x 600 的畫布，單位是像素
 }
 
-//在初始化之后一直循环执行
+//在初始化之後一直循環執行
 function draw(){
-  //渲染循环
+  //渲染循環
 }
 </code></pre>
 			</section>
 
 			<section>
-				<h1>系统变量</h1>
+				<h1>系統變數</h1>
 				<pre><code class="language-javaScript">windowWidth / windowHeight
-//窗口的高度和宽度
+//視窗的寬度和高度
 
 width / height
-//当前画布的高度和宽度
+//畫布的寬度和高度
 
 mouseX / mouseY
-//当前鼠标的X坐标和Y坐标
+//滑鼠的位置
 </code></pre>
 			</section>
 
 			<section>
-				<h1>调试输出</h1>
-				<pre><code class="language-javaScript">print();
-//在调试控制台上输出
+				<h1>測試輸出</h1>
+				<pre><code class="language-javaScript">console.log(data);
+//在控制台裡輸出資料
 
-//可以用双斜杠表示注释内容
+//用雙斜槓開頭來寫註解（不會被當程式執行）
 </code></pre>
 			</section>
 
 			<section>
-				<h1>颜色</h1>
+				<h1>顏色</h1>
 				<pre><code class="language-javaScript">fill(120); //gray(灰度): 0-255
-fill(100,125,255); //r（红）, g（绿）, b（蓝）: 0-255
-fill(255, 0, 0, 50); //r, g, b, alpha（）透明度
-fill('red'); //颜色名称
-fill('#ccc'); //3位十六进制值
-fill('#222222'); //6位十六进制值
-color(0, 0, 255); //p5.Color对象
+fill(100,125,255); //r（紅）, g（綠）, b（藍）: 0-255
+fill(255, 0, 0, 50); //r, g, b, alpha（透明度）
+fill('red'); //顏色名稱
+fill('#ccc'); //3位Hex色碼
+fill('#222222'); //6位Hex色碼
+color(0, 0, 255); //p5.Color物件
 </code></pre>
 			</section>
 
@@ -81,13 +81,13 @@ color(0, 0, 255); //p5.Color对象
 		<div class="column">
 
 			<section>
-				<h1>数学</h1>
-				<pre><code class="language-javaScript">+ - / *  //基础数学运算符号
+				<h1>數學</h1>
+				<pre><code class="language-javaScript">+ - / *  //基本運算符號
 
-random(low,high); //产生随机数
+random(low,high); //產生一個介於特定範圍的隨機數
 
 map(value, in1, in2, out1, out2);
-//把一个值从一个范围内映射到另一个范围。
+//把一個數值從一個範圍內映射到另一個範圍
 </code></pre>
 			</section>
 
@@ -95,15 +95,15 @@ map(value, in1, in2, out1, out2);
 			<!-- <section>
 			<h1>variable definition</h1>
 			<pre><code class="language-javaScript">//let & keyword defines a variable
-// use single = to store data in the variable
+//use single = to store data in the variable
 let variableName = 100;
 let myWords = "a string of text!";
-let randStorage = random(0,255); // store returned data
+let randStorage = random(0,255); //store returned data
 </code></pre>
 		</section> -->
 
 			<section>
-				<h1>2d 基本图形</h1>
+				<h1>2d 基本圖形</h1>
 				<pre><code class="language-javaScript">line(x1, y1, x2, y2);
 
 ellipse(x, y, width, height);
@@ -116,7 +116,7 @@ beginShape();
   vertex(x1, y1);
   vertex(x2, y2);
   vertex(x3, y3);
-  //添加更多的顶点
+  //添加更多的頂點
 endShape(CLOSE);
 
 text("string", x, y, boxwidth, boxheight);
@@ -124,15 +124,15 @@ text("string", x, y, boxwidth, boxheight);
 
 				<ul>
 					<li class="canvas-container">
-						<h2>网格系统</h2>
+						<h2>網格系統</h2>
 						<div id="grid-canvas"></div>
 					</li>
 					<li class="canvas-container">
-						<h2>line() 线条</h2>
+						<h2>line() 線條</h2>
 						<div id="line-canvas"></div>
 					</li>
 					<li class="canvas-container">
-						<h2>ellipse() 圆</h2>
+						<h2>ellipse() 圓</h2>
 						<div id="ellipse-canvas"></div>
 					</li>
 					<li class="canvas-container">
@@ -144,7 +144,7 @@ text("string", x, y, boxwidth, boxheight);
 						<div id="arc-canvas"></div>
 					</li>
 					<li class="canvas-container">
-						<h2>vertex() 顶点</h2>
+						<h2>vertex() 頂點</h2>
 						<div id="vertex-canvas"></div>
 					</li>
 				</ul>
@@ -157,47 +157,49 @@ text("string", x, y, boxwidth, boxheight);
 		<div class="column">
 
 			<section>
-				<h1>属性</h1>
+				<h1>屬性</h1>
 				<pre><code class="language-javaScript">background(color);
-//设置背景颜色
+//指定背景色
 
 fill(color);
-//设置填充颜色
+//指定填色
 
 noFill();
-//取消填充
+//不填色
 
 stroke(color);
-//设置描边颜色
+//指定描邊顏色
 
 strokeWeight(weight);
-//设置描边宽度
+//指定描邊寬度
 
 noStroke();
-//取消描边
+//不描邊
 
 ellipseMode(MODE);
 rectMode(MODE);
-//参数被解读的方式 中心模式，边角模式
+//設定參數被解讀的方式：CENTER（中心模式），CORNER（邊角模式）
 
 textSize(pixels);
-//文字大小
+//設定文字大小
 </code></pre>
 			</section>
 
 			<section>
-				<h1>if/then 逻辑</h1>
+				<h1>if/then 邏輯</h1>
 				<div class="logic">
-					<pre><code class="language-javaScript">if(条件){
-  //语句
+					<pre><code class="language-javaScript">if(condition){
+  //語句
 }
 
-===  //等于
-!=  //不等于
->   //大于
-<   //小于
->=  //大于等于
-<=  //小于等于
+===  //等於
+!=  //不等於
+>   //大於
+<   //小於
+>=  //大於等於
+<=  //小於等於
+|| //或
+&& //且
 
 </code></pre>
 					<div id="ifelse-canvas"></div>
@@ -209,7 +211,7 @@ textSize(pixels);
 			<footer>
 				Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC-BY-SA-NC-4.0
 				<br>
-				Translation by Drafff
+				Translation by eziraros
 			</footer>
 
 		</div>
