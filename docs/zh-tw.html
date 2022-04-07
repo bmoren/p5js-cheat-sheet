@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>p5.js新手小抄</title>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" href="prism.css">
+
+</head>
+
+<body id="zh">
+
+	<!-- Include the menu, there's likely a more elegent way to do this -->
+	<script src="menu.js"></script>
+
+	<article id="cheat-sheet">
+		<div class="column">
+
+			<header>
+				<h1 id="title">p5.js</h1>
+				<p id="subtitle">給新手的小抄!</p>
+			</header>
+
+			<section>
+				<h1>程式基本架構</h1>
+				<pre><code class="language-javaScript">//初始化，只在程式開始運行的時候執行一次
+function setup(){
+  createCanvas(800,600); //建立寬高為 800 x 600 的畫布，單位是像素
+}
+
+//在初始化之後一直循環執行
+function draw(){
+  //渲染循環
+}
+</code></pre>
+			</section>
+
+			<section>
+				<h1>系統變數</h1>
+				<pre><code class="language-javaScript">windowWidth / windowHeight
+//視窗的寬度和高度
+
+width / height
+//畫布的寬度和高度
+
+mouseX / mouseY
+//滑鼠的位置
+</code></pre>
+			</section>
+
+			<section>
+				<h1>測試輸出</h1>
+				<pre><code class="language-javaScript">console.log(data);
+//在控制台裡輸出資料
+
+//用雙斜槓開頭來寫註解（不會被當程式執行）
+</code></pre>
+			</section>
+
+			<section>
+				<h1>顏色</h1>
+				<pre><code class="language-javaScript">fill(120); //gray(灰度): 0-255
+fill(100,125,255); //r（紅）, g（綠）, b（藍）: 0-255
+fill(255, 0, 0, 50); //r, g, b, alpha（透明度）
+fill('red'); //顏色名稱
+fill('#ccc'); //3位Hex色碼
+fill('#222222'); //6位Hex色碼
+color(0, 0, 255); //p5.Color物件
+</code></pre>
+			</section>
+
+
+		</div>
+		<!-- End First Col -->
+
+		<div class="column">
+
+			<section>
+				<h1>數學</h1>
+				<pre><code class="language-javaScript">+ - / *  //基本運算符號
+
+random(low,high); //產生一個介於特定範圍的隨機數
+
+map(value, in1, in2, out1, out2);
+//把一個數值從一個範圍內映射到另一個範圍
+</code></pre>
+			</section>
+
+			<!-- CONSIDERING ADDING THIS HERE AND MOVING MATH TO THE BOTTOM OF COL 1, THOGUHTS? -->
+			<!-- <section>
+			<h1>variable definition</h1>
+			<pre><code class="language-javaScript">//let & keyword defines a variable
+//use single = to store data in the variable
+let variableName = 100;
+let myWords = "a string of text!";
+let randStorage = random(0,255); //store returned data
+</code></pre>
+		</section> -->
+
+			<section>
+				<h1>2d 基本圖形</h1>
+				<pre><code class="language-javaScript">line(x1, y1, x2, y2);
+
+ellipse(x, y, width, height);
+
+rect(x, y, width, height);
+
+arc(x, y, width, height, start, stop);
+
+beginShape();
+  vertex(x1, y1);
+  vertex(x2, y2);
+  vertex(x3, y3);
+  //添加更多的頂點
+endShape(CLOSE);
+
+text("string", x, y, boxwidth, boxheight);
+</code></pre>
+
+				<ul>
+					<li class="canvas-container">
+						<h2>網格系統</h2>
+						<div id="grid-canvas"></div>
+					</li>
+					<li class="canvas-container">
+						<h2>line() 線條</h2>
+						<div id="line-canvas"></div>
+					</li>
+					<li class="canvas-container">
+						<h2>ellipse() 圓</h2>
+						<div id="ellipse-canvas"></div>
+					</li>
+					<li class="canvas-container">
+						<h2>rect() 矩形</h2>
+						<div id="rect-canvas"></div>
+					</li>
+					<li class="canvas-container">
+						<h2>arc() 扇形</h2>
+						<div id="arc-canvas"></div>
+					</li>
+					<li class="canvas-container">
+						<h2>vertex() 頂點</h2>
+						<div id="vertex-canvas"></div>
+					</li>
+				</ul>
+			</section>
+
+
+
+		</div>
+		<!-- End Second Col -->
+		<div class="column">
+
+			<section>
+				<h1>屬性</h1>
+				<pre><code class="language-javaScript">background(color);
+//指定背景色
+
+fill(color);
+//指定填色
+
+noFill();
+//不填色
+
+stroke(color);
+//指定描邊顏色
+
+strokeWeight(weight);
+//指定描邊寬度
+
+noStroke();
+//不描邊
+
+ellipseMode(MODE);
+rectMode(MODE);
+//設定參數被解讀的方式：CENTER（中心模式），CORNER（邊角模式）
+
+textSize(pixels);
+//設定文字大小
+</code></pre>
+			</section>
+
+			<section>
+				<h1>if/then 邏輯</h1>
+				<div class="logic">
+					<pre><code class="language-javaScript">if(condition){
+  //語句
+}
+
+===  //等於
+!=  //不等於
+>   //大於
+<   //小於
+>=  //大於等於
+<=  //小於等於
+|| //或
+&& //且
+
+</code></pre>
+					<div id="ifelse-canvas"></div>
+
+				</div>
+
+			</section>
+
+			<footer>
+				Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC-BY-SA-NC-4.0
+				<br>
+				Translation by eziraros
+			</footer>
+
+		</div>
+
+	</article>
+
+
+	<script type="text/javascript">
+		// Terms to translate for diagrams
+		var terms = {
+			"width": "width",
+			"height": "height",
+			"stop": "stop",
+			"start": "start",
+			"true": "true",
+			"false": "false",
+			"continue_program": "continue program",
+			"test": "test",
+			"statements": "statements"
+		};
+	</script>
+
+	<script src="prism.js"></script>
+	<script src="p5.min.js"></script>
+	<script src="diagram.js"></script>
+</body>
+
+</html>
