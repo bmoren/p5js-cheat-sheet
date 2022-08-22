@@ -23,19 +23,19 @@
 
 			<header>
 				<h1 id="title">p5.js</h1>
-				<p id="subtitle">una hoja de trucos <br> para principiantes!</p>
+				<p id="subtitle">un resumen <br> para principiantes!</p>
 			</header>
 
 			<section>
 				<h1>estructura del programa</h1>
-				<pre><code class="language-javaScript">//corre cuando inicia el programa
+				<pre><code class="language-javaScript">//corre solo una vez cuando inicia el programa
 function setup(){
-  createCanvas(800,600); //ancho, alto en pixeles
+  createCanvas(800,600); //ancho, alto en píxeles
 }
 
-//corre continuamente despues del setup
+//corre continuamente después de la función setup
 function draw(){
-  //instrucciones de reproducción en circuito
+  //instrucciones a ejecutar en bucle
 }
 </code></pre>
 			</section>
@@ -54,7 +54,7 @@ mouseX / mouseY
 			</section>
 
 			<section>
-				<h1>retroalimentación no visual</h1>
+				<h1>Información a través de la consola</h1>
 				<pre><code class="language-javaScript">print();
 //reporta datos a la consola
 
@@ -69,8 +69,8 @@ mouseX / mouseY
 fill(100,125,255); //r, g, b: 0-255
 fill(255, 0, 0, 50); //r, g, b, alpha
 fill('red'); //nombre del color
-fill('#ccc'); //hex de 3 dígitos
-fill('#222222'); //relleno de hex de 6 dígitos
+fill('#ccc'); //hexadecimal de 3 dígitos
+fill('#222222'); //hexadecimal de 6 dígitos
 color(0, 0, 255); //objecto p5.Color
 </code></pre>
 			</section>
@@ -85,9 +85,9 @@ color(0, 0, 255); //objecto p5.Color
 			<h1>matemáticas</h1>
 			<pre><code class="language-javaScript">+ - / *  //operadores básicos matemáticos
 
-random(low,high); //número aleatorio, límite bajo, límite alto
+random(min, max); //número aleatorio entre min y max
 
-map(value, in1, in2, out1, out2);
+map(valor, entr1, entr2, sal1, sal2);
 //mapea un valor del rango de entrada al rango de salida
 </code></pre>
 		</section>
@@ -120,7 +120,7 @@ beginShape();
   //agrega más vértices
 endShape(CLOSE);
 
-text("string", x, y, boxwidth, boxheight);
+text("string", x, y, anchoCaja, altoCaja);
 </code></pre>
 
 			<ul>
@@ -166,39 +166,39 @@ fill(color);
 //define el color para rellenar
 
 noFill();
-//desabilita el relleno
+//deshabilita el relleno
 
 stroke(color);
 //define el color del trazo
 
-strokeWeight(weight);
-//define el ancho del trazo en pixeles
+strokeWeight(grosor);
+//define el ancho del trazo en píxeles
 
 noStroke();
-//desabilita el trazo
+//deshabilita el trazo
 
 ellipseMode(MODE);
 rectMode(MODE);
 //CENTER,CORNER (centro, esquina)
 
 textSize(pixels);
-//tamaño del texto en pixeles
+//tamaño del texto en píxeles
 </code></pre>
 		</section>
 
 		<section>
-			<h1>lógica if/then</h1>
+			<h1>lógica si/entonces</h1>
 			<div class="logic">
 				<pre><code class="language-javaScript">if(condición){
-  //declaraciones
+  //instrucciones
 }
 
 ===  //igual a
 !=  //no es igual a
 >   //mayor que
 <   //menor que
->=  //mayor ó igual que
-<=  //menor ó igual que
+>=  //mayor o igual que
+<=  //menor o igual que
 
 </code></pre>
 <div id="ifelse-canvas"></div>
@@ -211,6 +211,8 @@ textSize(pixels);
 			Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC-BY-SA-NC-4.0
 			<br>
 			Traducción por <a	href="http://andyvaldesvaldes.com">Andy Valdés Valdés</a>
+			<br>
+      Correcciones por <a href="https://github.com/trikaphundo">Daniel Fernández</a>
 		</footer>
 
 	</div>
@@ -218,6 +220,10 @@ textSize(pixels);
 	</article>
 
 
+  <!-- The word "condición" is femenine, thus to prevent
+  a misgender match with "true/false" in the diagram,
+  the words "true" and "false" must translate to
+  their femenine gender: "verdadera" and "falsa"-->
 	<script type="text/javascript">
 		// Terms to translate for diagrams
 		var terms = {
@@ -225,11 +231,11 @@ textSize(pixels);
 			"height": "alto",
 			"stop": "fin",
 			"start": "inicio",
-			"true": "verdadero",
-			"false": "falso",
+			"true": "verdadera",
+			"false": "falsa",
 			"continue_program": "continua el programa",
 			"test": "condición",
-			"statements": "declaraciones"
+			"statements": "instrucciones"
 		};
 	</script>
 
