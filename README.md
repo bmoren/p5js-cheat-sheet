@@ -18,6 +18,8 @@ This is a [web based cheat sheet](https://bmoren.github.io/p5js-cheat-sheet/) to
   + Translation by: [Antonio Belluscio](https://codesthesia.net)
 + [Español](https://bmoren.github.io/p5js-cheat-sheet/es.html)
   + Translation by: [Andy Valdés Valdés](https://andyvaldesvaldes.com/)
++ [Catalan](https://bmoren.github.io/p5js-cheat-sheet/ca.html)
+  + Translation by: [Daniel Fernández](https://github.com/trikaphundo)
 + [Indonesia](https://bmoren.github.io/p5js-cheat-sheet/id.html)
   + Translation by: [Zul Hilmi](https://github.com/hilmizul)
 + [Portuguese](https://bmoren.github.io/p5js-cheat-sheet/pt.html)

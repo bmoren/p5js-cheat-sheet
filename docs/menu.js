@@ -6,6 +6,7 @@ document.write(`
     <li> | </li>
     <select id="dropdownmenu" onchange="window.location = this.value + '.html' ">
     <option value="index"> English </option>
+    <option value="ca"> Català </option>
     <option value="es"> Español </option>
     <option value="fr"> Français </option>
     <option value="it"> Italiano </option>

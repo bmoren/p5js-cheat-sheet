@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>p5.js Cheat Sheet</title>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" href="prism.css">
+
+</head>
+
+<body>
+
+	<!-- Include the menu, there's likely a more elegent way to do this -->
+	<script src="menu.js"></script>
+
+		<article id="cheat-sheet">
+			<div class="column">
+
+			<header>
+				<h1 id="title">p5.js</h1>
+				<p id="subtitle">un breu resum <br>per a principiants!</p>
+			</header>
+
+			<section>
+				<h1>estructura del programa</h1>
+				<pre><code class="language-javaScript">//s'executa només un cop quan s'inicia el programa
+function setup(){
+  createCanvas(800,600); //amplada, alçada en píxels
+}
+
+//s'executa contínuament després de la funció setup
+function draw(){
+  //codi que s'executarà en bucle
+}
+</code></pre>
+			</section>
+
+			<section>
+				<h1>variables del sistema</h1>
+				<pre><code class="language-javaScript">windowWidth / windowHeight
+//amplada / alçada de la finestra
+
+width / height
+//amplada / alçada del llenç
+
+mouseX / mouseY
+//posició actual horitzontal / vertical del ratolí
+</code></pre>
+			</section>
+
+			<section>
+				<h1>Informació via la consola</h1>
+				<pre><code class="language-javaScript">print();
+//escriu dades a la consola
+
+//dues barres inclinades per a comentar el codi
+//(el programa ignora els comentaris)
+</code></pre>
+			</section>
+
+			<section>
+				<h1>color</h1>
+				<pre><code class="language-javaScript">fill(120); //escala de grisos: 0-255
+fill(100,125,255); //r, g, b: 0-255
+fill(255, 0, 0, 50); //r, g, b, alpha
+fill('red'); //nom del color
+fill('#ccc'); //hexadecimal de 3 dígits
+fill('#222222'); //hexadecimal de 6 dígits
+color(0, 0, 255); //objecte p5.Color
+</code></pre>
+			</section>
+
+
+	</div>
+	<!-- End First Col -->
+
+	<div class="column">
+
+		<section>
+			<h1>matemàtiques</h1>
+			<pre><code class="language-javaScript">+ - / *  //operadors matemàtics bàsics
+
+random(min, max); //nombre aleatori entre min i max
+
+map(valor, entr1, entr2, sort1, sort2);
+//converteix un valor entre entr1 i entr2
+//a un valor entre sort1 i sort2
+</code></pre>
+		</section>
+
+<!-- CONSIDERING ADDING THIS HERE AND MOVING MATH TO THE BOTTOM OF COL 1, THOGUHTS? -->
+		<!-- <section>
+			<h1>variable definition</h1>
+			<pre><code class="language-javaScript">//let & keyword defines a variable
+// use single = to store data in the variable
+let variableName = 100;
+let myWords = "a string of text!";
+let randStorage = random(0,255); // store returned data
+</code></pre>
+		</section> -->
+
+		<section>
+			<h1>primitives 2d</h1>
+			<pre><code class="language-javaScript">line(x1, y1, x2, y2);
+
+ellipse(x, y, amplada, altura);
+
+rect(x, y, amplada, altura);
+
+arc(x, y, amplada, altura, inici, final);
+
+beginShape();
+  vertex(x1, y1);
+  vertex(x2, y2);
+  vertex(x3, y3);
+  //afegiu més vèrtex
+endShape(CLOSE);
+
+text("string", x, y, ampleCaixa, alturaCaixa);
+</code></pre>
+
+			<ul>
+				<li class="canvas-container">
+					<h2>graella</h2>
+					<div id="grid-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>line()</h2>
+					<div id="line-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>ellipse()</h2>
+					<div id="ellipse-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>rect()</h2>
+					<div id="rect-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>arc()</h2>
+					<div id="arc-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>vertex()</h2>
+					<div id="vertex-canvas"></div>
+				</li>
+			</ul>
+		</section>
+
+
+
+	</div>
+	<!-- End Second Col -->
+	<div class="column">
+
+		<section>
+			<h1>atributs</h1>
+			<pre><code class="language-javaScript">background(color);
+//estableix el color de llenç
+
+fill(color);
+//estableix el color d'emplenat
+
+noFill();
+//desactiva l'emplenat
+
+stroke(color);
+//estableix el color del traç
+
+strokeWeight(gruix);
+//estableix el gruix del traç, en píxels
+
+noStroke();
+//desactiva el traç
+
+ellipseMode(MODE);
+rectMode(MODE);
+//CENTER,CORNER (centre o cantonada)
+
+textSize(pixels);
+</code></pre>
+		</section>
+
+		<section>
+			<h1>lògica si/aleshores</h1>
+			<div class="logic">
+				<pre><code class="language-javaScript">if(condició){
+  //instruccions
+}
+
+===  //igual a
+!=  //no igual a
+>   //major que
+<   //menor que
+>=  //major o igual que
+<=  //menor o igual que
+
+</code></pre>
+<div id="ifelse-canvas"></div>
+
+		</div>
+
+		</section>
+
+		<footer>
+			Compiled by Ben Moren <a href="http://benmoren.com">http://benmoren.com</a> CC-BY-SA-NC-4.0
+			<br>
+			Translation by <a href="https://github.com/trikaphundo">Daniel Fernández</a>
+		</footer>
+
+	</div>
+
+	</article>
+
+
+  <!-- In the flow diagram, the words "test", "true"
+  and "false" must be translated so that their genders
+  match. Since "condició" is feminine, so must be
+  the translations of "true" (certa) and "false" (falsa)-->
+	<script type="text/javascript">
+		// Terms to translate for diagrams
+		var terms = {
+			"width": "amplada",
+			"height": "alçada",
+			"stop": "final",
+			"start": "inici",
+			"true": "certa",
+			"false": "falsa",
+			"continue_program": "continua el programa",
+			"test": "condició",
+			"statements": "instruccions"
+		};
+	</script>
+
+	<script src="prism.js"></script>
+	<script src="p5.min.js"></script>
+	<script src="diagram.js"></script>
+</body>
+
+</html>
