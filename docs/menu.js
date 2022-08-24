@@ -31,7 +31,13 @@ document.write(`
 `)
 
 //select/toggle the correct language from the dropdown after making a selection (there might be a better way to do this?)
-var path = window.location.pathname.split("/").pop();
+//If path points to a directory, user agent will open the "index.html"
+//file in it, but will not append it to the window's path name. So treat
+//"" as "index.html"
+var path = window.location.pathname.split("/").pop()
+if(path === ""){
+  path = "index.html";
+}
 var lang = path.split(".")[0]
 // console.log( lang );
 document.querySelector(`option[value=${lang}]`).selected = true
