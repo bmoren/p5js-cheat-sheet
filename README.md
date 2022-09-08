@@ -16,7 +16,7 @@ This is a [web based cheat sheet](https://bmoren.github.io/p5js-cheat-sheet/) to
   + Translation by: [Yi donghoon](https://github.com/icq4ever)
 + [Italian](https://bmoren.github.io/p5js-cheat-sheet/it.html)
   + Translation by: [Antonio Belluscio](https://codesthesia.net)
-+ [Español](https://bmoren.github.io/p5js-cheat-sheet/es.html)
++ [Spanish](https://bmoren.github.io/p5js-cheat-sheet/es.html)
   + Translation by: [Andy Valdés Valdés](https://andyvaldesvaldes.com/)
 + [Catalan](https://bmoren.github.io/p5js-cheat-sheet/ca.html)
   + Translation by: [Daniel Fernández](https://github.com/trikaphundo)
