@@ -1,0 +1,6 @@
+{
+    "private": true,
+    "dependencies": {
+        "puppeteer": "^19.2.0"
+    }
+}
