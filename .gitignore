@@ -2,3 +2,5 @@
 .DS_Store
 debug.log
 .vscode/settings.json
+
+node_modules
