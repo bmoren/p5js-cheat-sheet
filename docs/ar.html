@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>p5.js Cheat Sheet</title>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" href="prism.css">
+
+</head>
+
+<body>
+
+	<!-- Include the menu, there's likely a more elegent way to do this -->
+	<script src="menu.js"></script>
+
+		<article id="cheat-sheet">
+			<div class="column">
+
+			<header>
+				<h1 id="title">p5.js</h1>
+				<p id="subtitle">!دليل المبتدئين</p>
+			</header>
+
+			<section>
+				<h1>بنية البرنامج</h1>
+				<pre><code class="language-javaScript">//تُنفَّذ مرة عند بدء البرنامج
+function setup(){
+  createCanvas(800,600); //العرض / الطول بالبكسل
+}
+
+//تُنفَّذ باستمرار بعد التثبيت
+function draw(){
+  //دورة المعالجة
+}
+</code></pre>
+			</section>
+
+			<section>
+				<h1>متغيرات النظام</h1>
+				<pre><code class="language-javaScript">windowWidth / windowHeight
+// عرض / طول النافذة
+width / height
+// عرض / طول اللوحة
+
+mouseX / mouseY
+//الموقع الأفقي والعمودي الحالي لمؤشر الفأرة 
+</code></pre>
+			</section>
+
+			<section>
+				<h1>تغذية راجعة نصية</h1>
+				<pre><code class="language-javaScript">print();
+//عرض البيانات على طرفية المخرجات
+
+// (سيتجاهلها البرنامج) شرطة مزدوجة للتعليق على الكود  
+</code></pre>
+			</section>
+
+			<section>
+				<h1>اللون</h1>
+				<pre><code class="language-javaScript">fill(120); //رمادي : 0-255
+fill(100,125,255); //r, g, b: 0-255
+fill(255, 0, 0, 50); //r, g, b, alpha
+fill('red'); //إسم اللون
+fill('#ccc'); //رمز سداسي من 3 أعداد
+fill('#222222'); //ملئ من رمز سداسي مكون من 6 أعداد
+color(0, 0, 255); //p5.Color كائن
+</code></pre>
+			</section>
+
+
+	</div>
+	<!-- End First Col -->
+
+	<div class="column">
+
+		<section>
+			<h1>الرياضيات</h1>
+			<pre><code class="language-javaScript">+ - / *  //عمليات الحساب الأساسية
+random(low,high); //رقم عشوائي من ضمن مدى معين
+
+map(value, in1, in2, out1, out2);
+//إيجاد قيمة من نطاق الإدخال بدلالة نطاق الإخراج
+</code></pre>
+		</section>
+
+<!-- CONSIDERING ADDING THIS HERE AND MOVING MATH TO THE BOTTOM OF COL 1, THOGUHTS? -->
+		<!-- <section>
+			<h1>variable definition</h1>
+			<pre><code class="language-javaScript">//let & keyword defines a variable
+// use single = to store data in the variable
+let variableName = 100;
+let myWords = "a string of text!";
+let randStorage = random(0,255); // store returned data
+</code></pre>
+		</section> -->
+
+		<section>
+			<h1>الأشكال ثنائية الأبعاد البدائية</h1>
+			<pre><code class="language-javaScript">line(x1, y1, x2, y2);
+
+ellipse(x, y, width, height);
+
+rect(x, y, width, height);
+
+arc(x, y, width, height, start, stop);
+
+beginShape();
+  vertex(x1, y1);
+  vertex(x2, y2);
+  vertex(x3, y3);
+  //أضف رؤوس أخرى
+endShape(CLOSE);
+
+text("string", x, y, boxwidth, boxheight);
+</code></pre>
+
+			<ul>
+				<li class="canvas-container">
+					<h2>نظام الرسم البياني</h2>
+					<div id="grid-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>line()</h2>
+					<div id="line-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>ellipse()</h2>
+					<div id="ellipse-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>rect()</h2>
+					<div id="rect-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>arc()</h2>
+					<div id="arc-canvas"></div>
+				</li>
+				<li class="canvas-container">
+					<h2>vertex()</h2>
+					<div id="vertex-canvas"></div>
+				</li>
+			</ul>
+		</section>
+
+
+
+	</div>
+	<!-- End Second Col -->
+	<div class="column">
+
+		<section>
+			<h1>الخصائص</h1>
+			<pre><code class="language-javaScript">background(color);
+//تعيين لون الخلفية
+
+fill(color);
+//تعيين لون الملئ
+
+noFill();
+//تعطيل الملئ
+
+stroke(color);
+//تعيين لون الحد
+
+strokeWeight(weight);
+//تعيين سمك الحد بالبكسل
+
+noStroke();
+//تعطيل الحد
+
+ellipseMode(MODE);
+rectMode(MODE);
+//المركز,الزاوية
+
+textSize(pixels);
+</code></pre>
+		</section>
+
+		<section>
+			<h1>المنطق الشرطي</h1>
+			<div class="logic">
+				<pre><code class="language-javaScript">if(test){
+  //الجمل
+}
+
+===  //يساوي
+!==  //لا يساوي
+>   //أكبر من
+<   //أصغر من
+>=  //أكبر من أو يساوي
+<=  //أصغر من أو يساوي
+
+</code></pre>
+<div id="ifelse-canvas"></div>
+
+		</div>
+
+		</section>
+
+		<footer>
+			تجميع بن مورين<a href="http://benmoren.com">http://benmoren.com</a> CC-BY-SA-NC-4.0
+			<br>
+			ترجمة أشرف الشرفا <a href="https://github.com/ashraf2033">https://github.com/ashraf2033</a>
+		</footer>
+
+	</div>
+
+	</article>
+
+
+	<script type="text/javascript">
+		// Terms to translate for diagrams
+		var terms = {
+			"width": "عرض",
+			"height": "طول",
+			"stop": "إيقاف",
+			"start": "بدء",
+			"true": "صحيح",
+			"false": "خطأ",
+			"continue_program": "إستكمال البرنامج",
+			"test": "قحص",
+			"statements": "جمل"
+		};
+	</script>
+
+	<script src="prism.js"></script>
+	<script src="p5.min.js"></script>
+	<script src="diagram.js"></script>
+</body>
+
+</html>
